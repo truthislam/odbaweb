@@ -254,6 +254,38 @@ header.stuck{background:rgba(250,250,250,.82);backdrop-filter:blur(18px);-webkit
 .custom-line p b{color:var(--fg);font-weight:600}
 .custom-line a{font-weight:600;color:var(--orange);font-size:.95rem;display:inline-flex;align-items:center;gap:.4rem;white-space:nowrap}
 .fineprint{margin-top:24px;color:var(--fg-faint);font-size:.84rem;line-height:1.6;text-align:center;max-width:70ch;margin-left:auto;margin-right:auto}
+
+/* ===== PAY + TRUST BLOCK ===== */
+.pay-trust{margin-top:48px;border:1px solid var(--line);border-radius:var(--r);background:var(--card);overflow:hidden;box-shadow:var(--raise-sh)}
+.pay-trust-head{padding:40px 48px 32px;border-bottom:1px solid var(--line);text-align:center}
+.pay-trust-title{font-family:var(--display);font-size:clamp(1.5rem,3vw,2rem);font-weight:700;letter-spacing:-.028em;margin:.6rem 0 .5rem}
+.pay-trust-sub{color:var(--fg-dim);font-size:.98rem;line-height:1.55}
+.pay-steps{display:flex;flex-direction:column;gap:0;padding:36px 48px;border-bottom:1px solid var(--line)}
+.pay-step{display:grid;grid-template-columns:44px 1fr;gap:18px;align-items:flex-start}
+.pay-step-num{width:44px;height:44px;border-radius:50%;background:rgba(255,90,0,.1);border:1.5px solid rgba(255,90,0,.35);color:var(--orange);font-family:var(--display);font-size:1.1rem;font-weight:700;display:grid;place-items:center;flex-shrink:0}
+.pay-step-label{font-family:var(--display);font-size:1.08rem;font-weight:600;letter-spacing:-.02em;margin-bottom:.35rem}
+.pay-step-desc{color:var(--fg-dim);font-size:.93rem;line-height:1.55}
+.pay-step-links{display:flex;flex-wrap:wrap;gap:.65rem;margin-top:1rem}
+.pay-link{display:inline-flex;align-items:center;gap:.5rem;background:var(--orange);color:#000;font-weight:600;font-size:.88rem;padding:.65rem 1.15rem;border-radius:10px;transition:transform .18s,background .18s,box-shadow .18s;box-shadow:var(--btn-sh);white-space:nowrap}
+.pay-link:hover{background:var(--orange-2);transform:translateY(-2px);box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 14px 36px -10px rgba(255,90,0,.65)}
+.pay-step-connector{padding:12px 0 12px 20px;color:var(--fg-faint)}
+.pay-trust-cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border-bottom:1px solid var(--line)}
+.ptcard{display:flex;align-items:flex-start;gap:14px;padding:24px 28px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);transition:background .25s}
+.ptcard:nth-child(2n){border-right:none}
+.ptcard:nth-child(3),.ptcard:nth-child(4){border-bottom:none}
+.ptcard:hover{background:rgba(255,90,0,.03)}
+.ptcard>svg{flex-shrink:0;margin-top:2px;color:var(--orange)}
+.ptcard strong{display:block;font-size:.95rem;font-weight:600;margin-bottom:.28rem}
+.ptcard span{color:var(--fg-dim);font-size:.85rem;line-height:1.5}
+.pay-footnote{text-align:center;padding:16px 24px;color:var(--fg-faint);font-size:.8rem;font-family:var(--mono);letter-spacing:.04em}
+@media(max-width:760px){
+  .pay-trust-head{padding:28px 24px 22px}
+  .pay-steps{padding:24px}
+  .pay-trust-cards{grid-template-columns:1fr}
+  .ptcard{border-right:none!important;border-bottom:1px solid var(--line)!important}
+  .ptcard:last-child{border-bottom:none!important}
+}
+
 @media(max-width:860px){.plans{grid-template-columns:1fr}}
 
 /* ===== BRIEF (the actual onboarding) ===== */
@@ -749,7 +781,7 @@ footer{border-top:1px solid var(--line);padding:46px 0 40px}
           <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>2 rounds of changes, then it's yours to keep</li>
         </ul>
         <a class="btn btn-fill" href="#start" data-tier="The Website">Start your build <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <p style="margin-top:1rem;font-size:.8rem;color:var(--fg-faint);text-align:center">Or skip ahead. <a href="[Payment Link - The Website $750 deposit]" style="color:var(--orange);font-weight:600">Pay the deposit</a> and lock your slot now.</p>
+        <p style="margin-top:1rem;font-size:.8rem;color:var(--fg-faint);text-align:center">Or skip ahead. <a href="https://buy.stripe.com/YOUR_STRIPE_LINK_WEBSITE" style="color:var(--orange);font-weight:600">Pay the $750 deposit</a> and lock your slot now.</p>
       </div>
 
       <!-- LAUNCH -->
@@ -767,7 +799,7 @@ footer{border-top:1px solid var(--line);padding:46px 0 40px}
           <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>1 round of changes, then it's yours</li>
         </ul>
         <a class="btn" href="#start" data-tier="Launch">Start with Launch</a>
-        <p style="margin-top:1rem;font-size:.8rem;color:var(--fg-faint);text-align:center">Or <a href="[Payment Link - Launch $375 deposit]" style="color:var(--orange);font-weight:600">pay the deposit</a> and lock your slot now.</p>
+        <p style="margin-top:1rem;font-size:.8rem;color:var(--fg-faint);text-align:center">Or <a href="https://buy.stripe.com/YOUR_STRIPE_LINK_LAUNCH" style="color:var(--orange);font-weight:600">pay the $375 deposit</a> and lock your slot now.</p>
       </div>
     </div>
 
@@ -779,7 +811,91 @@ footer{border-top:1px solid var(--line);padding:46px 0 40px}
       <a href="#start" data-tier="Custom build" class="custom-go">Start a custom build <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
 
-    <p class="fineprint rv">Your timeline starts when your brief and content are in. Domain registration not included. Extra revision rounds are $50 each. No retainers. No contracts.<br><br><strong>Payment:</strong> 50% to lock your slot, 50% when you approve the preview. You see the site before the final payment. Pay online in two clicks. <a href="[Payment Link]" style="color:var(--orange);font-weight:600">[Payment Link]</a></p>
+    <!-- TRUST + PAYMENT BLOCK -->
+    <div class="pay-trust rv">
+      <div class="pay-trust-head">
+        <span class="mono" style="color:var(--orange);letter-spacing:.18em;font-size:.72rem">How payment works</span>
+        <h3 class="pay-trust-title">You see the site before you pay the rest.</h3>
+        <p class="pay-trust-sub">Two payments. No surprises. Stripe handles everything — card, Apple Pay, Google Pay.</p>
+      </div>
+
+      <div class="pay-steps">
+        <div class="pay-step">
+          <div class="pay-step-num">1</div>
+          <div class="pay-step-body">
+            <div class="pay-step-label">Lock your slot</div>
+            <div class="pay-step-desc">50% deposit now. This is what reserves your week in the queue and starts the clock.</div>
+            <div class="pay-step-links">
+              <a href="https://buy.stripe.com/YOUR_STRIPE_LINK_LAUNCH" class="pay-link">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+                Pay Launch deposit — $375
+              </a>
+              <a href="https://buy.stripe.com/YOUR_STRIPE_LINK_WEBSITE" class="pay-link">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+                Pay Website deposit — $750
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pay-step-connector">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        </div>
+
+        <div class="pay-step">
+          <div class="pay-step-num">2</div>
+          <div class="pay-step-body">
+            <div class="pay-step-label">I build. You review.</div>
+            <div class="pay-step-desc">You get a live preview link. Request changes in writing. Nothing is final until you say so.</div>
+          </div>
+        </div>
+
+        <div class="pay-step-connector">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        </div>
+
+        <div class="pay-step">
+          <div class="pay-step-num">3</div>
+          <div class="pay-step-body">
+            <div class="pay-step-label">Approve, then pay the rest</div>
+            <div class="pay-step-desc">Only once you're happy with what you see. The remaining 50% is invoiced after your sign-off.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pay-trust-cards">
+        <div class="ptcard">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <div>
+            <strong>Full refund if you don't love it</strong>
+            <span>Not happy after the preview? You get your deposit back. No argument, no hoops.</span>
+          </div>
+        </div>
+        <div class="ptcard">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          <div>
+            <strong>No contract. No retainer.</strong>
+            <span>You're not locked in to anything. One flat price, done.</span>
+          </div>
+        </div>
+        <div class="ptcard">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+          <div>
+            <strong>Stripe-secured checkout</strong>
+            <span>Card, Apple Pay, Google Pay. Your details never touch my server.</span>
+          </div>
+        </div>
+        <div class="ptcard">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          <div>
+            <strong>Timeline starts on receipt</strong>
+            <span>The clock doesn't start until your brief and content are in — so you're never rushed.</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="pay-footnote">Domain registration not included. Extra revision rounds are $50 each.</p>
+    </div>
   </div>
 </section>
 
@@ -933,23 +1049,23 @@ footer{border-top:1px solid var(--line);padding:46px 0 40px}
       <div class="rv">
         <span class="kicker mono"><span class="ln"></span>Paid product · Content engine</span>
         <h2 class="h2">Meet <span class="o">Ghost.</span></h2>
-        <p class="lead">Most AI content reads like AI content. Ghost doesn't. It's tuned to your voice and built to cut the filler that gives AI away. You feed it your notes. It hands back copy that sounds like you wrote it.</p>
+        <p class="lead">A writing tool built on extensive research into the human writing patterns, structures, and nuances that AI consistently violates. Tuned to your voice, it delivers frictionless, authentic copy.</p>
         <p class="lead" style="margin-top:.9rem">Ghost is locked. Pick a plan to get in.</p>
         <a class="btn btn-fill" href="ghost-unlock.html" style="margin-top:1.6rem">Unlock Ghost <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <p class="addfine">Got an old blog to refresh? One-time project. <a href="mailto:hello@odbaweb.com" style="color:var(--orange);font-weight:600">Get a quote.</a></p>
       </div>
       <div class="rows rv">
         <div class="ac">
-          <div><div class="nm">Basic</div><div class="ds">2 posts a week. SEO. Your voice.</div></div>
-          <div class="pr">$150<small>/mo</small></div>
+          <div><div class="nm">Basic</div><div class="ds">Up to 20 drafts a month. One voice profile.</div></div>
+          <div class="pr">$49<small>/mo</small></div>
         </div>
         <div class="ac">
-          <div><div class="nm">Professional</div><div class="ds">4 posts a week. Custom voice. Full keyword strategy.</div></div>
-          <div class="pr">$300<small>/mo</small></div>
+          <div><div class="nm">Pro</div><div class="ds">Unlimited drafts. Three voice profiles. Keyword targeting.</div></div>
+          <div class="pr">$99<small>/mo</small></div>
         </div>
         <div class="ac">
-          <div><div class="nm">Premium</div><div class="ds">Daily posts. Social snippets. The whole strategy.</div></div>
-          <div class="pr">$500<small>/mo</small></div>
+          <div><div class="nm">Lifetime</div><div class="ds">Everything in Pro. Pay once. Keep it forever.</div></div>
+          <div class="pr">$499<small> once</small></div>
         </div>
       </div>
     </div>
