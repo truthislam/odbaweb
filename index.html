@@ -1,0 +1,1405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>odba web · websites that get the call</title>
+<meta name="description" content="It's just me. No agency, no runaround. I learn your market, build you a fast site made to get the call, and hand it over. One flat price, no meetings, full refund if you don't love it.">
+<meta property="og:title" content="odba web · websites that get the call">
+<meta property="og:description" content="Market research, conversion-built design, and SEO baked in. One flat price. No meetings. Live in days.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Figtree:wght@300;400;500;600;700;800;900&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "odba web",
+  "description": "Productized web design studio for local businesses. Market research, conversion-focused design, and SEO baked in. Flat pricing, no meetings, fast delivery.",
+  "url": "https://odbaweb.com",
+  "email": "hello@odbaweb.com",
+  "areaServed": "United States",
+  "priceRange": "$750 - $2,500+",
+  "makesOffer": [
+    {"@type": "Offer", "name": "Launch", "price": "750", "priceCurrency": "USD"},
+    {"@type": "Offer", "name": "The Website", "price": "1500", "priceCurrency": "USD"},
+    {"@type": "Offer", "name": "Care & Growth", "price": "99", "priceCurrency": "USD", "priceSpecification": {"@type": "UnitPriceSpecification", "billingDuration": "P1M"}}
+  ]
+}
+</script>
+<style>
+:root{
+  /* Designjoy-style light theme */
+  --bg:#fafafa;          /* page */
+  --raise:#f5f5f5;       /* alternating section bg */
+  --card:#ffffff;        /* cards float pure white on off-white */
+  --card-2:#f5f5f5;      /* subtle inset (browser chrome etc.) */
+  --line:#e7e7e7;        /* hairlines */
+  --line-2:#efefef;      /* fainter hairlines */
+  --fg:#0d0d10;          /* near-black ink */
+  --fg-dim:#5c5c66;      /* secondary text */
+  --fg-faint:#9a9aa3;    /* tertiary / labels */
+  --orange:#ff5a00;
+  --orange-2:#ff7a2e;
+  --r:22px;
+  --r-sm:14px;
+  --maxw:1180px;
+  --sans:'Figtree',system-ui,sans-serif;
+  --display:'Bricolage Grotesque','Figtree',system-ui,sans-serif;
+  --mono:'Geist Mono',ui-monospace,monospace;
+  /* Designjoy floating-card shadow: big, soft, with crisp top edge */
+  --raise-sh:0 1px 2px rgba(0,0,0,.05), 0 20px 48px -28px rgba(0,0,0,.28);
+  --btn-sh:inset 0 1px 0 rgba(255,255,255,.34), 0 12px 38px -12px rgba(255,90,0,.55);
+  --mock-sh:0 2px 4px rgba(0,0,0,.06), 0 24px 70px -30px rgba(0,0,0,.45);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);color:var(--fg);font-family:var(--sans);
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+  overflow-x:hidden;line-height:1.55;font-weight:400;letter-spacing:-.011em;position:relative;
+}
+body::after{content:"";position:fixed;inset:0;z-index:1000;pointer-events:none;opacity:.02;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+::selection{background:var(--orange);color:#000}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.mono{font-family:var(--mono);text-transform:uppercase;letter-spacing:.18em;font-size:.7rem;font-weight:500}
+.display{font-family:var(--display)}
+/* orange underline accent on key words */
+.mark{position:relative;white-space:nowrap}
+.mark::after{content:"";position:absolute;left:-2px;right:-2px;bottom:.04em;height:.16em;border-radius:3px;
+  background:var(--orange);transform:rotate(-.6deg);opacity:.9}
+
+/* ===== NAV ===== */
+header{position:fixed;inset:0 0 auto 0;z-index:100;transition:background .35s,border-color .35s;border-bottom:1px solid transparent}
+header.stuck{background:rgba(250,250,250,.82);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand{display:flex;align-items:center;gap:11px;font-weight:700;font-size:1.18rem;letter-spacing:-.04em}
+.brand img{width:30px;height:30px;display:block;filter:drop-shadow(0 4px 10px rgba(255,90,0,.35))}
+.brand .o{color:var(--orange)}
+.nav-mid{display:flex;gap:34px}
+.nav-mid a{font-size:.93rem;color:var(--fg-dim);transition:color .2s}
+.nav-mid a:hover{color:var(--fg)}
+.nav-cta{font-size:.9rem;font-weight:600;padding:.6rem 1.2rem;border-radius:11px;background:var(--fg);color:#fff;transition:transform .18s,background .18s;box-shadow:inset 0 1px 0 rgba(255,255,255,.5)}
+.nav-cta:hover{transform:translateY(-1px);background:var(--orange);box-shadow:var(--btn-sh)}
+@media(max-width:760px){.nav-mid{display:none}}
+
+/* ===== BUTTONS ===== */
+.btn{display:inline-flex;align-items:center;gap:.55rem;font-weight:600;font-size:1rem;
+  padding:1rem 1.9rem;border-radius:13px;cursor:pointer;border:none;transition:transform .18s,background .18s,box-shadow .18s,border-color .18s;white-space:nowrap}
+.btn-fill{background:var(--orange);color:#000;box-shadow:var(--btn-sh)}
+.btn-fill:hover{background:var(--orange-2);transform:translateY(-2px);box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 18px 50px -12px rgba(255,90,0,.75)}
+.btn-fill svg{transition:transform .18s}
+.btn-fill:hover svg{transform:translateX(4px)}
+.btn-ghost{background:var(--card);color:var(--fg);border:1px solid var(--line);box-shadow:var(--raise-sh)}
+.btn-ghost:hover{border-color:#d4d4d4;transform:translateY(-2px)}
+
+/* ===== HERO ===== */
+.hero{padding:118px 24px 0;text-align:center;position:relative}
+.glow{position:absolute;top:9%;left:50%;transform:translateX(-50%);width:min(620px,84vw);height:340px;
+  background:radial-gradient(ellipse at center,rgba(255,90,0,.10),transparent 62%);filter:blur(30px);pointer-events:none;z-index:0}
+.hero>*:not(.glow){position:relative;z-index:1}
+.pill{display:inline-flex;align-items:center;gap:.55rem;padding:.46rem 1rem;border:1px solid var(--line);
+  border-radius:100px;background:var(--card);margin-bottom:1.7rem;box-shadow:var(--raise-sh)}
+.pill .blink{width:7px;height:7px;border-radius:50%;background:var(--orange);box-shadow:0 0 10px var(--orange)}
+.pill span.t{font-size:.82rem;color:var(--fg-dim);font-weight:500}
+@media(prefers-reduced-motion:no-preference){
+  .pill .blink{animation:blink 2.4s infinite}
+  @keyframes blink{0%,100%{opacity:1}50%{opacity:.35}}
+}
+.hero h1{font-family:var(--display);font-size:clamp(2.7rem,7.4vw,5.3rem);font-weight:700;line-height:.98;letter-spacing:-.038em;max-width:16ch;margin:0 auto 1.4rem}
+.hero h1 .hl{color:var(--orange)}
+.hero .lede{font-size:clamp(1.08rem,1.75vw,1.3rem);color:var(--fg-dim);max-width:600px;margin:0 auto 2rem;font-weight:450;line-height:1.62}
+.hero .lede strong{color:var(--fg);font-weight:600}
+.actions{display:flex;gap:.85rem;justify-content:center;flex-wrap:wrap}
+.trust{margin-top:1.9rem;display:flex;gap:1.4rem;justify-content:center;flex-wrap:wrap;color:var(--fg-faint);font-size:.84rem}
+.trust span{display:inline-flex;align-items:center;gap:.5rem}
+.trust .d{width:5px;height:5px;border-radius:50%;background:var(--orange);opacity:.75}
+
+/* slide-only entrance — always visible, never a blank fold */
+@media(prefers-reduced-motion:no-preference){
+  @keyframes rise{from{transform:translateY(20px)}to{transform:translateY(0)}}
+  .hero .pill{animation:rise .6s .02s cubic-bezier(.2,.7,.3,1) both}
+  .hero h1{animation:rise .6s .1s cubic-bezier(.2,.7,.3,1) both}
+  .hero .lede{animation:rise .6s .18s cubic-bezier(.2,.7,.3,1) both}
+  .hero .actions{animation:rise .6s .26s cubic-bezier(.2,.7,.3,1) both}
+  .hero .trust{animation:rise .6s .34s cubic-bezier(.2,.7,.3,1) both}
+  .showcase{animation:rise .7s .42s cubic-bezier(.2,.7,.3,1) both}
+}
+
+/* reveal on scroll */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.2,.7,.3,1),transform .7s cubic-bezier(.2,.7,.3,1)}
+.rv.on{opacity:1;transform:none}
+
+/* ---- HERO SHOWCASE: real client screenshot in a browser ---- */
+.showcase{margin:60px auto 0;max-width:1000px;position:relative}
+.browser{
+  border:1px solid var(--line);border-radius:19px;overflow:hidden;background:var(--card);
+  box-shadow:var(--mock-sh);
+}
+.bchrome{height:40px;display:flex;align-items:center;gap:7px;padding:0 16px;background:var(--card-2);border-bottom:1px solid var(--line-2)}
+.bchrome .dot{width:9px;height:9px;border-radius:50%;background:#dadada}
+.bchrome .burl{margin-left:14px;flex:1;max-width:300px;height:20px;border-radius:6px;background:#ededed;display:flex;align-items:center;padding:0 12px;font-family:var(--mono);font-size:.6rem;color:var(--fg-faint);letter-spacing:.04em}
+.bscreen{display:block;width:100%}
+.live-tag{position:absolute;top:18px;right:-10px;z-index:3;display:inline-flex;align-items:center;gap:.45rem;
+  background:var(--card);border:1px solid var(--line);border-radius:100px;padding:.5rem .9rem;font-size:.76rem;color:var(--fg-dim);
+  box-shadow:0 18px 40px -18px rgba(0,0,0,.8);font-weight:500}
+.live-tag b{color:var(--fg);font-weight:600}
+.live-tag .dl{width:7px;height:7px;border-radius:50%;background:#22c55e;box-shadow:0 0 8px #22c55e}
+@media(max-width:560px){.live-tag{display:none}}
+
+/* ===== MARQUEE ===== */
+.strip{border-block:1px solid var(--line);background:var(--raise);overflow:hidden;padding:18px 0;margin-top:90px;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+@media(prefers-reduced-motion:no-preference){
+  .track{animation:run 38s linear infinite}
+  @keyframes run{to{transform:translateX(-50%)}}
+}
+.track{display:flex;width:max-content}
+.track .row{display:flex;align-items:center;gap:42px;padding-right:42px}
+.track .row b{font-family:var(--mono);text-transform:uppercase;letter-spacing:.18em;font-size:.76rem;font-weight:400;color:var(--fg-dim)}
+.track .row i{width:5px;height:5px;border-radius:50%;background:var(--orange);display:block;flex-shrink:0}
+
+/* ===== SECTION ===== */
+.sec{padding:114px 0;position:relative}
+.kicker{display:inline-flex;align-items:center;gap:.7rem;color:var(--orange);margin-bottom:1.25rem}
+.kicker .ln{width:28px;height:1px;background:var(--orange)}
+.h2{font-family:var(--display);font-size:clamp(2rem,4.3vw,3.3rem);font-weight:700;letter-spacing:-.032em;line-height:1.04}
+.h2 .o{color:var(--orange)}
+.lead{color:var(--fg-dim);font-size:1.1rem;max-width:58ch;margin-top:1.1rem;line-height:1.65}
+
+/* ===== WHY (editorial, no card grid) ===== */
+.why{border-top:1px solid var(--line)}
+.why .grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:60px;align-items:start}
+.why .intro{position:sticky;top:100px}
+.why .list .row{display:grid;grid-template-columns:150px 1fr;gap:28px;padding:34px 0;border-top:1px solid var(--line)}
+.why .list .row:last-child{border-bottom:1px solid var(--line)}
+.why .list .lab{font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--orange);padding-top:.55rem}
+.why .list h3{font-family:var(--display);font-size:1.5rem;font-weight:600;letter-spacing:-.025em;margin-bottom:.6rem}
+.why .list p{color:var(--fg-dim);font-size:1rem;line-height:1.62;max-width:48ch}
+@media(max-width:880px){
+  .why .grid{grid-template-columns:1fr;gap:38px}
+  .why .intro{position:static}
+  .why .list .row{grid-template-columns:1fr;gap:10px;padding:26px 0}
+}
+
+/* ===== HOW ===== */
+.how{border-top:1px solid var(--line);background:var(--raise)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);background:var(--raise);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-top:52px}
+.step{background:var(--raise);padding:40px 34px;transition:background .3s;border-right:1px solid var(--line-2)}
+.step:last-child{border-right:none}
+.step:hover{background:var(--card)}
+.step .num{font-family:var(--mono);font-size:2.3rem;font-weight:500;color:#dcdcdc;letter-spacing:-.04em;line-height:1;margin-bottom:22px}
+.step:hover .num{color:var(--orange)}
+.step h4{font-family:var(--display);font-size:1.24rem;font-weight:600;letter-spacing:-.02em;margin-bottom:.55rem}
+.step p{color:var(--fg-dim);font-size:.95rem;line-height:1.6}
+.how .nocall{margin-top:28px;display:inline-flex;align-items:center;gap:.7rem;color:var(--fg-dim);font-size:.95rem;border:1px solid var(--line);background:var(--card);padding:.78rem 1.3rem;border-radius:100px}
+.how .nocall b{color:var(--fg);font-weight:600}
+.how .nocall .ck{color:var(--orange);display:inline-flex}
+@media(max-width:860px){.steps{grid-template-columns:1fr}.step{border-right:none;border-bottom:1px solid var(--line-2)}.step:last-child{border-bottom:none}}
+
+/* ===== WORK ===== */
+.work{border-top:1px solid var(--line)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:50px}
+.proj{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--card);
+  transition:transform .4s cubic-bezier(.2,.7,.3,1),border-color .4s,box-shadow .4s;display:flex;flex-direction:column}
+.proj:hover{transform:translateY(-8px);border-color:#d4d4d4;box-shadow:var(--mock-sh)}
+.shot{position:relative;overflow:hidden;border-bottom:1px solid var(--line);background:#fff}
+.shot .top{height:26px;display:flex;align-items:center;gap:6px;padding:0 12px;border-bottom:1px solid var(--line-2);background:#f2f2f2;position:relative;z-index:2}
+.shot .top i{width:7px;height:7px;border-radius:50%;background:#dadada}
+.shot .top .u{margin-left:8px;font-family:var(--mono);font-size:.52rem;color:var(--fg-faint);letter-spacing:.04em}
+.shot img.scr{display:block;width:100%;height:auto}
+.proj.soon{border-style:dashed;align-items:center;justify-content:center;text-align:center}
+.proj.soon .body{padding:0 28px}
+.proj .meta{padding:25px;flex:1;display:flex;flex-direction:column}
+.proj .tag{font-family:var(--mono);font-size:.6rem;text-transform:uppercase;letter-spacing:.14em;color:var(--fg-faint);margin-bottom:.75rem}
+.proj h3{font-family:var(--display);font-size:1.32rem;font-weight:600;letter-spacing:-.02em;margin-bottom:.55rem}
+.proj p{color:var(--fg-dim);font-size:.92rem;line-height:1.6}
+.proj .open{margin-top:auto;padding-top:16px;font-size:.85rem;font-weight:600;color:var(--orange);display:inline-flex;align-items:center;gap:.4rem}
+@media(max-width:860px){.cards{grid-template-columns:1fr}}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);background:var(--raise);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-top:20px}
+.stat{padding:36px 20px;text-align:center;border-right:1px solid var(--line-2)}
+.stat:last-child{border-right:none}
+.stat b{font-family:var(--display);display:flex;align-items:baseline;justify-content:center;gap:.12em;font-size:2.55rem;font-weight:700;letter-spacing:-.03em;color:var(--fg);line-height:1;white-space:nowrap}
+.stat b .o{color:var(--orange);font-size:1.25rem;font-weight:700}
+.stat span{display:block;margin-top:13px;font-size:.78rem;color:var(--fg-dim);letter-spacing:.02em}
+@media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2){border-right:none}.stat:nth-child(1),.stat:nth-child(2){border-bottom:1px solid var(--line-2)}}
+
+/* ===== OFFER ===== */
+.offer{border-top:1px solid var(--line);background:var(--raise);position:relative}
+.flat{display:inline-flex;align-items:center;gap:.55rem;margin-top:1.3rem;color:var(--fg-dim);font-size:.95rem}
+.flat b{color:var(--fg);font-weight:600}
+.plans{display:grid;grid-template-columns:1.4fr 1fr;gap:22px;margin-top:54px;align-items:stretch}
+.plan{border:1px solid var(--line);border-radius:var(--r);background:var(--card);padding:38px 36px;display:flex;flex-direction:column;position:relative;transition:transform .4s}
+.plan:hover{transform:translateY(-5px)}
+.plan.hero-plan{border-color:rgba(255,90,0,.42);background:linear-gradient(180deg,#fff7f2,var(--card));box-shadow:0 38px 84px -52px rgba(255,90,0,.3), var(--raise-sh)}
+.plan .ptag{position:absolute;top:-13px;left:36px;background:var(--orange);color:#000;font-family:var(--mono);font-size:.62rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;padding:.4rem .8rem;border-radius:8px;box-shadow:var(--btn-sh)}
+.plan .pname{font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;color:var(--fg-faint);text-transform:uppercase;margin-bottom:.9rem}
+.plan .price{display:flex;align-items:baseline;gap:.5rem;margin-bottom:.25rem}
+.plan .price .amt{font-family:var(--display);font-size:clamp(2.7rem,5vw,3.5rem);font-weight:700;letter-spacing:-.035em;line-height:1}
+.plan.hero-plan .price .amt{color:var(--orange)}
+.plan .price .per{color:var(--fg-faint);font-size:.9rem;font-weight:500}
+.plan .ready{color:var(--fg-faint);font-size:.84rem;font-family:var(--mono);letter-spacing:.04em;margin-bottom:1.2rem}
+.plan .pdesc{color:var(--fg-dim);font-size:1rem;line-height:1.55;margin-bottom:1.5rem}
+.plan ul{list-style:none;display:flex;flex-direction:column;gap:.8rem;margin-bottom:1.9rem}
+.plan li{display:flex;align-items:flex-start;gap:.7rem;font-size:.95rem;color:#3a3a42}
+.plan li svg{flex-shrink:0;margin-top:2px;color:var(--orange)}
+.plan .btn{margin-top:auto;width:100%;justify-content:center}
+.plan.alt .btn{background:var(--card);color:var(--fg);border:1px solid var(--line);box-shadow:var(--raise-sh)}
+.plan.alt .btn:hover{border-color:#d4d4d4;transform:translateY(-2px)}
+.custom-line{margin-top:22px;border:1px dashed var(--line);border-radius:var(--r-sm);padding:22px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;background:#fcfcfc}
+.custom-line p{color:var(--fg-dim);font-size:.98rem}
+.custom-line p b{color:var(--fg);font-weight:600}
+.custom-line a{font-weight:600;color:var(--orange);font-size:.95rem;display:inline-flex;align-items:center;gap:.4rem;white-space:nowrap}
+.fineprint{margin-top:24px;color:var(--fg-faint);font-size:.84rem;line-height:1.6;text-align:center;max-width:70ch;margin-left:auto;margin-right:auto}
+@media(max-width:860px){.plans{grid-template-columns:1fr}}
+
+/* ===== BRIEF (the actual onboarding) ===== */
+.brief{border-top:1px solid var(--line);position:relative;overflow:hidden}
+.brief .bglow{position:absolute;top:-10%;left:50%;transform:translateX(-50%);width:min(760px,90vw);height:420px;
+  background:radial-gradient(ellipse at center,rgba(255,90,0,.09),transparent 64%);filter:blur(34px);pointer-events:none;z-index:0}
+.brief .wrap{position:relative;z-index:1}
+.brief .bhead{text-align:center;max-width:640px;margin:0 auto 14px}
+.brief .bhead .lead{margin-left:auto;margin-right:auto}
+.briefcard{max-width:780px;margin:46px auto 0;border:1px solid var(--line);border-radius:var(--r);
+  background:var(--card);box-shadow:var(--mock-sh);overflow:hidden}
+/* progress rail */
+.bprog{display:flex;align-items:center;gap:0;padding:18px 30px;border-bottom:1px solid var(--line-2);background:var(--card)}
+.bprog .pstep{flex:1;display:flex;align-items:center;gap:.6rem;font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--fg-faint);transition:color .3s}
+.bprog .pstep .dot{width:22px;height:22px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;
+  font-size:.64rem;color:var(--fg-faint);flex-shrink:0;transition:all .3s;background:var(--card)}
+.bprog .pstep.active{color:var(--fg)}
+.bprog .pstep.active .dot{border-color:var(--orange);color:var(--orange)}
+.bprog .pstep.done .dot{background:var(--orange);border-color:var(--orange);color:#000}
+.bprog .pstep.done{color:var(--fg-dim)}
+.bprog .pline{height:1px;flex:0 0 26px;background:var(--line);margin:0 4px;align-self:center;margin-top:-1px}
+@media(max-width:620px){.bprog .pstep span{display:none}.bprog{justify-content:center;gap:14px}.bprog .pstep{flex:0}.bprog .pline{flex-basis:20px}}
+/* panels */
+.bbody{padding:38px 40px 34px}
+.bpanel{display:none}
+.bpanel.on{display:block}
+@media(prefers-reduced-motion:no-preference){
+  .bpanel.on{animation:bfade .45s cubic-bezier(.2,.7,.3,1) both}
+  @keyframes bfade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+}
+.bpanel .qnum{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);margin-bottom:.7rem}
+.bpanel h3{font-family:var(--display);font-size:1.55rem;font-weight:600;letter-spacing:-.025em;line-height:1.1;margin-bottom:.5rem}
+.bpanel .qsub{color:var(--fg-dim);font-size:.96rem;line-height:1.55;margin-bottom:1.5rem;max-width:54ch}
+.fld{margin-bottom:18px}
+.fld label{display:block;font-size:.82rem;color:var(--fg-dim);margin-bottom:.5rem;font-weight:500}
+.fld label .req{color:var(--orange)}
+.inp,.ta{width:100%;background:#fafafa;border:1px solid var(--line);border-radius:var(--r-sm);color:var(--fg);
+  font-family:var(--sans);font-size:1rem;padding:.85rem 1rem;transition:border-color .2s,box-shadow .2s;letter-spacing:-.011em}
+.inp::placeholder,.ta::placeholder{color:#b3b3ba}
+.inp:focus,.ta:focus{outline:none;border-color:var(--orange);box-shadow:0 0 0 3px rgba(255,90,0,.12)}
+.ta{resize:vertical;min-height:96px;line-height:1.5}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:560px){.two{grid-template-columns:1fr}}
+/* tier chips */
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{cursor:pointer;border:1px solid var(--line);background:#fafafa;border-radius:100px;padding:.6rem 1.1rem;
+  font-size:.9rem;color:var(--fg-dim);transition:all .2s;font-weight:500;user-select:none}
+.chip:hover{border-color:#d4d4d4;color:var(--fg)}
+.chip.sel{border-color:var(--orange);background:rgba(255,90,0,.1);color:var(--fg)}
+.chip .cp{color:var(--fg-faint);font-size:.8rem;margin-left:.3rem}
+.chip.sel .cp{color:var(--orange-2)}
+/* the 3 benchmark slots — the centerpiece */
+.vibe-help{display:flex;align-items:flex-start;gap:.6rem;background:rgba(255,90,0,.06);border:1px solid rgba(255,90,0,.2);
+  border-radius:var(--r-sm);padding:.85rem 1rem;margin-bottom:1.3rem;font-size:.88rem;color:var(--fg-dim);line-height:1.5}
+.vibe-help svg{flex-shrink:0;color:var(--orange);margin-top:1px}
+.slots{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:620px){.slots{grid-template-columns:1fr}}
+.slot{border:1px dashed var(--line);border-radius:var(--r-sm);background:#fafafa;padding:16px;transition:border-color .25s,background .25s;position:relative}
+.slot.filled{border-style:solid;border-color:rgba(255,90,0,.4);background:rgba(255,90,0,.04)}
+.slot .snum{position:absolute;top:10px;right:12px;font-family:var(--mono);font-size:.62rem;color:var(--fg-faint);letter-spacing:.1em}
+.slot .slabel{font-family:var(--mono);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:.55rem}
+.slot input{width:100%;background:transparent;border:none;color:var(--fg);font-family:var(--mono);font-size:.85rem;padding:0;letter-spacing:-.01em}
+.slot input::placeholder{color:#bcbcc2}
+.slot input:focus{outline:none}
+.slot .why-in{width:100%;background:transparent;border:none;border-top:1px solid var(--line-2);margin-top:.7rem;padding-top:.7rem;
+  color:var(--fg-dim);font-family:var(--sans);font-size:.82rem;resize:none;min-height:34px;line-height:1.4}
+.slot .why-in::placeholder{color:#bcbcc2}
+.slot .why-in:focus{outline:none}
+/* nav buttons */
+.bnav{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:22px 40px;border-top:1px solid var(--line-2);background:#fafafa}
+.bnav .back{font-size:.9rem;color:var(--fg-dim);cursor:pointer;background:none;border:none;font-family:var(--sans);
+  display:inline-flex;align-items:center;gap:.4rem;transition:color .2s;padding:.5rem 0}
+.bnav .back:hover{color:var(--fg)}
+.bnav .back[disabled]{opacity:0;pointer-events:none}
+.bnav .spacer{flex:1}
+.bnav .next{font-weight:600;font-size:.95rem;padding:.8rem 1.6rem;border-radius:12px;background:var(--orange);color:#000;
+  border:none;cursor:pointer;box-shadow:var(--btn-sh);display:inline-flex;align-items:center;gap:.5rem;transition:transform .18s,background .18s}
+.bnav .next:hover{background:var(--orange-2);transform:translateY(-2px)}
+.bnav .next svg{transition:transform .18s}.bnav .next:hover svg{transform:translateX(3px)}
+.bnote{text-align:center;color:var(--fg-faint);font-size:.82rem;margin-top:20px}
+.bnote b{color:var(--fg-dim);font-weight:500}
+/* review + done */
+.review-grid{display:grid;gap:0;border:1px solid var(--line);border-radius:var(--r-sm);overflow:hidden;margin-bottom:8px}
+.rrow{display:grid;grid-template-columns:160px 1fr;gap:18px;padding:14px 18px;border-top:1px solid var(--line-2);font-size:.92rem}
+.rrow:first-child{border-top:none}
+.rrow .rk{font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--fg-faint);padding-top:.15rem}
+.rrow .rv-val{color:var(--fg);line-height:1.5;white-space:pre-wrap}
+.rrow .rv-val .empty{color:var(--fg-faint);font-style:italic}
+@media(max-width:560px){.rrow{grid-template-columns:1fr;gap:4px}}
+.done{text-align:center;padding:14px 10px}
+.done .dcheck{width:60px;height:60px;border-radius:50%;background:rgba(255,90,0,.12);border:1px solid rgba(255,90,0,.4);
+  display:grid;place-items:center;margin:0 auto 22px;color:var(--orange)}
+.done h3{font-family:var(--display);font-size:1.8rem;font-weight:700;letter-spacing:-.03em;margin-bottom:.6rem}
+.done p{color:var(--fg-dim);font-size:1rem;line-height:1.6;max-width:46ch;margin:0 auto 1.4rem}
+.done .dmeta{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--mono);font-size:.74rem;letter-spacing:.06em;
+  color:var(--fg-dim);border:1px solid var(--line);background:var(--card);padding:.7rem 1.2rem;border-radius:100px}
+.done .dmeta .dl{width:7px;height:7px;border-radius:50%;background:#22c55e;box-shadow:0 0 8px #22c55e}
+
+/* ===== CONTENT (restored) ===== */
+.content{border-top:1px solid var(--line)}
+.content .grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:60px;align-items:center}
+.content .addfine{margin-top:1.1rem;color:var(--fg-faint);font-size:.9rem;line-height:1.6}
+.content .rows{display:flex;flex-direction:column}
+.ac{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px 4px;border-top:1px solid var(--line)}
+.ac:last-child{border-bottom:1px solid var(--line)}
+.ac .nm{font-family:var(--display);font-size:1.22rem;font-weight:600;letter-spacing:-.02em;margin-bottom:.25rem}
+.ac .ds{color:var(--fg-dim);font-size:.92rem;line-height:1.5}
+.ac .pr{font-family:var(--display);font-size:1.7rem;font-weight:700;letter-spacing:-.03em;color:var(--orange);white-space:nowrap}
+.ac .pr small{font-family:var(--sans);font-size:.8rem;font-weight:500;color:var(--fg-faint);letter-spacing:0}
+@media(max-width:880px){.content .grid{grid-template-columns:1fr;gap:34px}}
+
+/* ===== CARE ===== */
+.care{border-top:1px solid var(--line);background:var(--raise)}
+.care .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:58px;align-items:center}
+.care .left .price{display:flex;align-items:baseline;gap:.5rem;margin:1.3rem 0 .35rem}
+.care .left .price .amt{font-family:var(--display);font-size:clamp(2.9rem,6vw,4rem);font-weight:700;letter-spacing:-.035em;color:var(--orange);line-height:1}
+.care .left .price .per{color:var(--fg-dim);font-size:1rem;font-weight:500}
+.care .left .cancel{color:var(--fg-dim);font-size:.95rem;margin-bottom:1.7rem}
+.care .left .cancel b{color:var(--fg);font-weight:600}
+.care .feats{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.cfeat{border:1px solid var(--line);border-radius:var(--r-sm);background:var(--card);padding:23px 22px}
+.cfeat .ci{width:38px;height:38px;border-radius:10px;background:rgba(255,90,0,.12);border:1px solid rgba(255,90,0,.3);display:grid;place-items:center;color:var(--orange);margin-bottom:14px}
+.cfeat h4{font-family:var(--display);font-size:1.04rem;font-weight:600;letter-spacing:-.02em;margin-bottom:.35rem}
+.cfeat p{color:var(--fg-dim);font-size:.88rem;line-height:1.5}
+.care .note{margin-top:22px;color:var(--fg-faint);font-size:.9rem}
+.care .note b{color:var(--fg-dim);font-weight:600}
+@media(max-width:900px){.care .grid{grid-template-columns:1fr;gap:34px}}
+@media(max-width:520px){.care .feats{grid-template-columns:1fr}}
+
+/* ===== GUARANTEE ===== */
+.guar{border-top:1px solid var(--line);text-align:center;position:relative;overflow:hidden}
+.guar .gglow{position:absolute;inset:0;background:radial-gradient(58% 120% at 50% 0,rgba(255,90,0,.07),transparent 58%);pointer-events:none}
+.guar>*{position:relative;z-index:1}
+.guar .shield{width:62px;height:62px;border-radius:17px;background:rgba(255,90,0,.12);border:1px solid rgba(255,90,0,.34);display:grid;place-items:center;color:var(--orange);margin:0 auto 26px;box-shadow:0 18px 46px -24px rgba(255,90,0,.5)}
+.guar h2{font-family:var(--display);font-size:clamp(2rem,4.8vw,3.4rem);font-weight:700;letter-spacing:-.032em;line-height:1.06;max-width:18ch;margin:0 auto}
+.guar h2 .o{color:var(--orange)}
+.guar p{color:var(--fg-dim);font-size:1.12rem;max-width:54ch;margin:1.4rem auto 0;line-height:1.62}
+.guar p strong{color:var(--fg);font-weight:600}
+
+/* ===== FAQ ===== */
+.faq{border-top:1px solid var(--line);background:var(--raise)}
+.faq .grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:58px;align-items:start}
+.qa{border-bottom:1px solid var(--line)}
+.qa:first-child{border-top:1px solid var(--line)}
+.qa button{width:100%;background:none;border:none;color:var(--fg);font-family:var(--sans);font-size:1.08rem;font-weight:600;letter-spacing:-.02em;
+  text-align:left;padding:1.45rem 0;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.qa button .pm{flex-shrink:0;color:var(--fg-faint);transition:transform .3s,color .3s;font-size:1.4rem;line-height:1;font-weight:400}
+.qa.open button .pm{transform:rotate(45deg);color:var(--orange)}
+.qa .ans{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.2,.7,.3,1)}
+.qa .ans p{color:var(--fg-dim);font-size:1rem;line-height:1.68;padding:0 0 1.45rem;max-width:62ch}
+.qa.open .ans{max-height:340px}
+@media(max-width:860px){.faq .grid{grid-template-columns:1fr;gap:28px}}
+
+/* ===== FINAL ===== */
+.final{border-top:1px solid var(--line);text-align:center;position:relative;overflow:hidden}
+.final .fglow{position:absolute;top:0;left:50%;transform:translateX(-50%);width:min(620px,86vw);height:360px;background:radial-gradient(ellipse at center,rgba(255,90,0,.10),transparent 62%);filter:blur(32px);pointer-events:none}
+.final>*{position:relative;z-index:1}
+.final h2{font-family:var(--display);font-size:clamp(2.3rem,5.6vw,4.2rem);font-weight:700;letter-spacing:-.038em;line-height:1;max-width:16ch;margin:0 auto 1.3rem}
+.final h2 .o{color:var(--orange)}
+.final p{color:var(--fg-dim);font-size:1.12rem;margin-bottom:2.1rem;max-width:48ch;margin-left:auto;margin-right:auto}
+.final .slots{margin-top:1.7rem;font-size:.84rem;color:var(--fg-faint);font-family:var(--mono);letter-spacing:.08em}
+.final .slots .blink{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--orange);box-shadow:0 0 10px var(--orange);animation:blink 2.4s infinite;margin-right:.5rem;vertical-align:middle}
+
+/* ===== FOOTER ===== */
+footer{border-top:1px solid var(--line);padding:46px 0 40px}
+.foot{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.foot .brand{margin-bottom:10px}
+.foot .brand img{width:28px;height:28px}
+.foot .fmail{color:var(--fg-dim);font-size:.95rem;line-height:1.7}
+.foot .fmail a{color:var(--fg)}
+.foot .cr{color:var(--fg-faint);font-size:.82rem}
+.foot-mid{display:flex;gap:24px;font-size:.9rem;color:var(--fg-dim)}
+.foot-mid a:hover{color:var(--fg)}
+@media(max-width:760px){.foot{flex-direction:column;align-items:flex-start;gap:18px}}
+.rev-badge{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--orange);border:1px solid rgba(255,90,0,.35);background:rgba(255,90,0,.06);
+  border-radius:8px;padding:.55rem .85rem;margin-bottom:1.2rem}
+.rev-badge svg{flex-shrink:0}
+/* testimonial / social proof */
+.proof{border-top:1px solid var(--line)}
+.proof-grid{margin-top:44px;display:grid;gap:18px}
+.tquote{border:1px dashed var(--line);border-radius:var(--r-sm);background:var(--card);padding:28px 30px}
+.tquote.placeholder p{color:var(--fg-faint);font-size:.96rem;line-height:1.6;font-style:italic;text-align:center}
+
+/* ===== BOOK / OLED FINAL (Designjoy-style) ===== */
+.book{background:#000;color:#fff;padding:96px 0 0;border-top:1px solid #000}
+.book .wrap{position:relative;z-index:1}
+.book .bgrid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.book .bleft .blogo{display:flex;align-items:center;gap:11px;font-weight:700;font-size:1.18rem;letter-spacing:-.04em;margin-bottom:30px}
+.book .bleft .blogo img{width:28px;height:28px}
+.book .bleft .blogo .o{color:var(--orange)}
+.book .bleft h2{font-family:var(--display);font-size:clamp(2.4rem,4.6vw,3.5rem);font-weight:700;letter-spacing:-.035em;line-height:1.02;margin-bottom:1.1rem}
+.book .bleft h2 .it{font-style:italic;font-weight:600;color:var(--fg-faint)}
+.book .bleft h2 .o{color:var(--orange)}
+.book .bleft p{color:#9a9aa3;font-size:1.08rem;line-height:1.6;max-width:42ch}
+.book .bleft .bsmile{margin-top:40px;display:flex;gap:-10px}
+/* widget */
+.cal{background:#0a0a0c;border:1px solid #1c1c20;border-radius:20px;padding:26px 26px 22px;box-shadow:0 40px 90px -50px rgba(0,0,0,.9)}
+.cal .chead{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px}
+.cal .chead .mtitle{font-size:1.1rem;font-weight:700;letter-spacing:-.02em}
+.cal .chead .mtitle span{color:#6a6a73;font-weight:500;margin-left:.4rem}
+.cal .chead .nav{display:flex;gap:6px}
+.cal .chead .nav button{width:30px;height:30px;border-radius:8px;background:#161619;border:1px solid #232329;color:#c7c7cf;cursor:pointer;display:grid;place-items:center;transition:background .2s,border-color .2s}
+.cal .chead .nav button:hover:not(:disabled){background:#202026;border-color:#33333b}
+.cal .chead .nav button:disabled{opacity:.32;cursor:not-allowed}
+.cal .dow{display:grid;grid-template-columns:repeat(7,1fr);gap:2px;margin-bottom:8px}
+.cal .dow span{text-align:center;font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;color:#5c5c66;padding:4px 0}
+.cal .grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.cal .day{aspect-ratio:1;display:grid;place-items:center;border-radius:9px;font-size:.92rem;font-weight:500;color:#3e3e46;position:relative;user-select:none}
+.cal .day.pad{visibility:hidden}
+.cal .day.past{color:#2a2a30}
+.cal .day.avail{background:#161619;color:#fff;cursor:pointer;transition:background .18s,transform .12s}
+.cal .day.avail:hover{background:#23232a}
+.cal .day.today{background:#fff;color:#000;font-weight:700}
+.cal .day.sel{background:var(--orange);color:#000;font-weight:700}
+.cal .day.full{color:#2f2f36;text-decoration:line-through;text-decoration-color:#3a3a42}
+.cal .day .dotmk{position:absolute;bottom:5px;left:50%;transform:translateX(-50%);width:4px;height:4px;border-radius:50%;background:var(--orange)}
+.cal .day.today .dotmk{background:#000}
+/* tier picker (replaces time slots) */
+.cal .slotwrap{margin-top:22px;border-top:1px solid #1c1c20;padding-top:20px}
+.cal .slothead{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.cal .slothead .sd{font-weight:700;font-size:.95rem}
+.cal .slothead .sd span{color:#6a6a73;font-weight:500;font-family:var(--mono);font-size:.7rem;margin-left:.4rem}
+.cal .slothead .wcap{font-family:var(--mono);font-size:.6rem;letter-spacing:.08em;color:#5c5c66;text-transform:uppercase}
+.cal .tiers{display:flex;flex-direction:column;gap:9px}
+.cal .tier{display:flex;align-items:center;justify-content:space-between;gap:12px;background:#0e0e11;border:1px solid #1f1f25;border-radius:12px;padding:.85rem 1.1rem;cursor:pointer;transition:border-color .18s,background .18s,transform .12s;text-align:left;color:#fff;font-family:var(--sans);width:100%}
+.cal .tier:hover:not(:disabled){border-color:var(--orange);background:#131316;transform:translateY(-1px)}
+.cal .tier .tname{font-weight:600;font-size:.96rem;display:flex;align-items:center;gap:.55rem}
+.cal .tier .tname .tprice{color:var(--orange);font-weight:700}
+.cal .tier .tmeta{font-family:var(--mono);font-size:.6rem;letter-spacing:.06em;color:#6a6a73;text-transform:uppercase}
+.cal .tier .tgo{color:#5c5c66;transition:transform .18s,color .18s}
+.cal .tier:hover:not(:disabled) .tgo{color:var(--orange);transform:translateX(3px)}
+.cal .tier:disabled{opacity:.4;cursor:not-allowed;background:#0b0b0d}
+.cal .tier:disabled .tname .tprice{color:#5c5c66}
+.cal .tier.gone .tmeta{color:#7a4a3a}
+.cal .emptypick{color:#6a6a73;font-size:.9rem;text-align:center;padding:18px 0;line-height:1.5}
+.cal .monthfull{background:rgba(255,90,0,.08);border:1px solid rgba(255,90,0,.28);border-radius:12px;padding:.95rem 1.1rem;color:#ffb38a;font-size:.9rem;text-align:center;line-height:1.5}
+/* dark footer fold-in */
+.book footer{margin-top:84px;border-top:1px solid #16161a;background:transparent;padding:40px 0 44px}
+.book footer .foot .brand{color:#fff}
+.book footer .foot .cr{color:#5c5c66}
+.book footer .foot-mid a{color:#9a9aa3}
+.book footer .foot-mid a:hover{color:#fff}
+.book footer .fmail{color:#9a9aa3}
+.book footer .fmail a{color:#fff}
+@media(max-width:900px){.book .bgrid{grid-template-columns:1fr;gap:38px}.book{padding-top:72px}}
+
+</style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<header id="hd">
+  <div class="wrap nav">
+    <a class="brand" href="#top"><img src="odbaweb_logo.png" alt="odba web logo"><span>o<span class="o">db</span>a web</span></a>
+    <nav class="nav-mid">
+      <a href="#how">How it works</a>
+      <a href="#work">Work</a>
+      <a href="#offer">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a href="#book">Book</a>
+    </nav>
+    <a class="nav-cta" href="#start">Start your build</a>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="top">
+  <div class="glow"></div>
+  <span class="pill"><span class="blink"></span><span class="t">One person. Flat price. Full refund if it's not right.</span></span>
+  <h1>A website that <span class="hl mark">gets the call.</span></h1>
+  <p class="lede">I research your market, write the copy, and build a site made to get the call. Flat price. Preview before you pay. No meetings, ever.</p>
+  <div class="actions">
+    <a class="btn btn-fill" href="#start">Start your build <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <a class="btn btn-ghost" href="#work">See the work</a>
+  </div>
+  <div class="trust">
+    <span><span class="d"></span>Live in days</span>
+    <span><span class="d"></span>Full refund if you don't love it</span>
+    <span><span class="d"></span>Research included</span>
+    <span><span class="d"></span>You keep everything</span>
+  </div>
+
+  <!-- real client screenshot -->
+  <div class="showcase">
+    <span class="live-tag"><span class="dl"></span><b>Live client</b> · Gemini Accounting</span>
+    <div class="browser">
+      <div class="bchrome">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        <span class="burl">geminitax.co</span>
+      </div>
+      <picture>
+        <source srcset="shot-gemini-home.avif" type="image/avif">
+        <source srcset="shot-gemini-home.webp" type="image/webp">
+        <img class="bscreen" src="shot-gemini-home.webp" alt="Gemini Accounting Services, a website built by odba web" width="1600" loading="eager">
+      </picture>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MARQUEE ===== -->
+<div class="strip">
+  <div class="track">
+    <div class="row"><i></i><b>Market research</b><i></i><b>Built to get the call</b><i></i><b>SEO baked in</b><i></i><b>No meetings</b><i></i><b>Flat pricing</b><i></i><b>Mobile first</b><i></i><b>Hosting handled</b><i></i><b>Yours to keep</b></div>
+    <div class="row"><i></i><b>Market research</b><i></i><b>Built to get the call</b><i></i><b>SEO baked in</b><i></i><b>No meetings</b><i></i><b>Flat pricing</b><i></i><b>Mobile first</b><i></i><b>Hosting handled</b><i></i><b>Yours to keep</b></div>
+  </div>
+</div>
+
+<!-- ===== WHY (editorial) ===== -->
+<section class="sec why">
+  <div class="wrap">
+    <div class="grid">
+      <div class="intro rv">
+        <span class="kicker mono"><span class="ln"></span>Why it works</span>
+        <h2 class="h2">No meetings by design. <span class="o">Not by accident.</span></h2>
+        <p class="lead">Every call is time you don't have. Every meeting is a delay. I cut all of it. You get faster work, everything in writing, nothing lost. No meetings isn't a shortcut. It's the whole point.</p>
+      </div>
+      <div class="list">
+        <div class="row rv">
+          <div class="lab">The research</div>
+          <div>
+            <h3>I do the homework first</h3>
+            <p>I dig into your market and your competitors and pull the exact phrases your customers already search for. We build for demand that's there, not for guesses.</p>
+          </div>
+        </div>
+        <div class="row rv">
+          <div class="lab">The build</div>
+          <div>
+            <h3>I build it to get the call</h3>
+            <p>Fast, mobile-first, with your phone number always one tap away. Every choice on the page is aimed at moving someone from "just looking" to "booked."</p>
+          </div>
+        </div>
+        <div class="row rv">
+          <div class="lab">The visibility</div>
+          <div>
+            <h3>Google can actually find you</h3>
+            <p>Proper local SEO, schema, and clean structure baked in from day one, so you show up when it counts. And it's never a surprise line on the invoice.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOW ===== -->
+<section class="sec how" id="how">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker mono"><span class="ln"></span>The process</span>
+      <h2 class="h2">Three steps. <span class="o">Zero meetings.</span></h2>
+      <p class="lead">From the first form to your domain going live, everything happens in writing and in your browser. No calendar invites. Ever.</p>
+    </div>
+    <div class="steps rv">
+      <div class="step">
+        <div class="num">01</div>
+        <h4>Fill out a quick brief</h4>
+        <p>Tell me about your business, drop in your photos and colors. Two minutes, not twenty. I only ask what actually matters.</p>
+      </div>
+      <div class="step">
+        <div class="num">02</div>
+        <h4>I research and build</h4>
+        <p>Keywords, competitors, design, copy, SEO. All on my end, all included. You don't lift a finger or sit through a single call.</p>
+      </div>
+      <div class="step">
+        <div class="num">03</div>
+        <h4>Approve and go live</h4>
+        <p>I send you a preview link. You give notes in writing, we tidy it up, and you launch. Want me to handle hosting too? Easy.</p>
+      </div>
+    </div>
+    <div class="rv">
+      <span class="nocall"><span class="ck"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> <b>No calls. No meetings.</b> Everything in writing, on your schedule.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WORK ===== -->
+<section class="sec work" id="work">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker mono"><span class="ln"></span>Recent work</span>
+      <h2 class="h2">The work speaks <span class="o">for itself.</span></h2>
+    </div>
+    <div class="cards">
+      <article class="proj rv">
+        <div class="shot">
+          <div class="top"><i></i><i></i><i></i><span class="u">geminitax.co</span></div>
+          <picture>
+            <source srcset="shot-gemini-home.avif" type="image/avif">
+            <source srcset="shot-gemini-home.webp" type="image/webp">
+            <img class="scr" src="shot-gemini-home.webp" alt="Gemini Accounting Services, a website built by odba web" loading="lazy">
+          </picture>
+        </div>
+        <div class="meta">
+          <div class="tag">Accounting · Pennsylvania</div>
+          <h3>Gemini Accounting</h3>
+          <p>A full redesign for a growing CPA firm. Fast, fully optimized, with a contact setup that actually pulls in leads.</p>
+          <span class="open">View the site <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+        </div>
+      </article>
+
+      <article class="proj rv">
+        <div class="shot">
+          <div class="top"><i></i><i></i><i></i><span class="u">discountdrivingschool.net</span></div>
+          <picture>
+            <source srcset="shot-drive-home.avif" type="image/avif">
+            <source srcset="shot-drive-home.webp" type="image/webp">
+            <img class="scr" src="shot-drive-home.webp" alt="Discount Driving School, a website built by odba web" loading="lazy">
+          </picture>
+        </div>
+        <div class="meta">
+          <div class="tag">Driving School · Seattle</div>
+          <h3>Discount Driving School</h3>
+          <p>A redesign plus a custom student and admin portal. Clean booking, mobile-first, and ready for real traffic.</p>
+          <span class="open">View the site <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+        </div>
+      </article>
+
+      <article class="proj rv">
+        <div class="shot">
+          <div class="top"><i></i><i></i><i></i><span class="u">nurhabits.com</span></div>
+          <picture>
+            <source srcset="shot-nurhabits-home.avif" type="image/avif">
+            <source srcset="shot-nurhabits-home.webp" type="image/webp">
+            <img class="scr" src="shot-nurhabits-home.webp" alt="NurHabits, a website built by odba web" loading="lazy">
+          </picture>
+        </div>
+        <div class="meta">
+          <div class="tag">Wellness · Portland</div>
+          <h3>NurHabits</h3>
+          <p>A faith-based habit tracker that guides Muslims through staged daily routines. Bold landing page built to convert visitors into sign-ups.</p>
+          <span class="open">View the site <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+        </div>
+      </article>
+    </div>
+
+    <div class="stats rv">
+      <div class="stat"><b>48<span class="o">h</span></b><span>Fastest launch</span></div>
+      <div class="stat"><b>2<span class="o">wk</span></b><span>Longest build</span></div>
+      <div class="stat"><b>0<span class="o">calls</span></b><span>Start to finish</span></div>
+      <div class="stat"><b><span class="o">$</span>0</b><span>Hidden fees</span></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== SOCIAL PROOF ===== -->
+<!-- REPLACE: real client testimonials required -->
+<section class="sec proof">
+  <div class="wrap">
+    <div class="proof-intro rv" style="text-align:center;max-width:640px;margin:0 auto">
+      <span class="kicker mono" style="justify-content:center"><span class="ln"></span>What clients say</span>
+      <h2 class="h2">Real builders. <span class="o">Real results.</span></h2>
+    </div>
+    <div class="proof-grid rv">
+      <blockquote class="tquote placeholder">
+        <p>"Your testimonial could be here. Every build ships with a follow-up to collect real feedback after launch."</p>
+      </blockquote>
+      <blockquote class="tquote placeholder">
+        <p>"Another client result will be featured here once the follow-up wraps. Real feedback only, no fabricated quotes."</p>
+      </blockquote>
+      <blockquote class="tquote placeholder">
+        <p>"A third testimonial slot, reserved for actual client words collected after going live."</p>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ===== OFFER ===== -->
+<section class="sec offer" id="offer">
+  <div class="wrap">
+    <div class="rv" style="text-align:center;max-width:720px;margin:0 auto">
+      <span class="kicker mono" style="justify-content:center"><span class="ln"></span>Pricing</span>
+      <h2 class="h2">Simple pricing. <span class="o">No quotes, no surprises.</span></h2>
+      <span class="flat"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> <b>The price you see is the price you pay.</b> Research, SEO &amp; hosting setup come standard.</span>
+    </div>
+
+    <div class="plans rv">
+      <!-- FLAGSHIP -->
+      <div class="plan hero-plan">
+        <span class="ptag">Most picked</span>
+        <div class="pname">The Website</div>
+        <div class="price"><span class="amt">$1,500</span><span class="per">one-time</span></div>
+        <div class="ready">Live in about a week</div>
+        <div class="rev-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg> 2 Revision Rounds</div>
+        <p class="pdesc">For the business ready to get found and turn visitors into customers. This is the one that wins you jobs.</p>
+        <ul>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Up to 5 pages, with your services broken out</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Full market research + keyword strategy</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Local SEO + schema, done right</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Contact form, tap-to-call &amp; Google Maps</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Analytics, SSL &amp; hosting setup</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>2 rounds of changes, then it's yours to keep</li>
+        </ul>
+        <a class="btn btn-fill" href="#start" data-tier="The Website">Start your build <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <p style="margin-top:1rem;font-size:.8rem;color:var(--fg-faint);text-align:center">Or skip ahead. <a href="[Payment Link - The Website $750 deposit]" style="color:var(--orange);font-weight:600">Pay the deposit</a> and lock your slot now.</p>
+      </div>
+
+      <!-- LAUNCH -->
+      <div class="plan alt">
+        <div class="pname">Launch</div>
+        <div class="price"><span class="amt">$750</span><span class="per">one-time</span></div>
+        <div class="ready">Live in 48 hours</div>
+        <div class="rev-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg> 1 Revision Round</div>
+        <p class="pdesc">A clean, fast one-pager for when you just need to look the part and get the phone ringing.</p>
+        <ul>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>One-page site, up to 6 sections</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Market research + the SEO basics</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Contact form &amp; tap-to-call</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Analytics, SSL &amp; hosting setup</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>1 round of changes, then it's yours</li>
+        </ul>
+        <a class="btn" href="#start" data-tier="Launch">Start with Launch</a>
+        <p style="margin-top:1rem;font-size:.8rem;color:var(--fg-faint);text-align:center">Or <a href="[Payment Link - Launch $375 deposit]" style="color:var(--orange);font-weight:600">pay the deposit</a> and lock your slot now.</p>
+      </div>
+    </div>
+
+    <div class="custom-line rv">
+      <div>
+        <p><b>Selling online, or need logins and a portal?</b> That's custom work. It starts at $2,500 and kicks off the exact same way.</p>
+        <div class="rev-badge" style="margin-top:.85rem;margin-bottom:0"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg> 3 Revision Rounds</div>
+      </div>
+      <a href="#start" data-tier="Custom build" class="custom-go">Start a custom build <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+
+    <p class="fineprint rv">Your timeline starts when your brief and content are in. Domain registration not included. Extra revision rounds are $50 each. No retainers. No contracts.<br><br><strong>Payment:</strong> 50% to lock your slot, 50% when you approve the preview. You see the site before the final payment. Pay online in two clicks. <a href="[Payment Link]" style="color:var(--orange);font-weight:600">[Payment Link]</a></p>
+  </div>
+</section>
+
+<!-- ===== BRIEF (the onboarding — fix #1) ===== -->
+<section class="sec brief" id="start">
+  <div class="bglow"></div>
+  <div class="wrap">
+    <div class="bhead rv">
+      <span class="kicker mono" style="justify-content:center"><span class="ln"></span>Start your build</span>
+      <h2 class="h2">The whole brief. <span class="o">Right here.</span></h2>
+      <p class="lead">This is the only step. A few questions, three sites you like the look of, and you're done. I take it from there. No call to book, no thread to start.</p>
+    </div>
+
+    <div class="briefcard rv">
+      <!-- progress -->
+      <div class="bprog" id="bprog">
+        <div class="pstep active" data-s="0"><span class="dot">1</span><span>Business</span></div>
+        <div class="pline"></div>
+        <div class="pstep" data-s="1"><span class="dot">2</span><span>Goals</span></div>
+        <div class="pline"></div>
+        <div class="pstep" data-s="2"><span class="dot">3</span><span>Vibe</span></div>
+        <div class="pline"></div>
+        <div class="pstep" data-s="3"><span class="dot">4</span><span>Review</span></div>
+      </div>
+
+      <div class="bbody">
+        <!-- STEP 1 — BUSINESS -->
+        <div class="bpanel on" data-panel="0">
+          <div class="qnum">01 / 04 · Your business</div>
+          <h3>Tell me who you are.</h3>
+          <p class="qsub">Just the basics, enough to ground the research. Two minutes, not twenty.</p>
+          <div class="two">
+            <div class="fld">
+              <label>Business name <span class="req">*</span></label>
+              <input class="inp" id="f_name" type="text" placeholder="e.g. Gemini Tax">
+            </div>
+            <div class="fld">
+              <label>What do you do? <span class="req">*</span></label>
+              <input class="inp" id="f_what" type="text" placeholder="e.g. Accounting firm">
+            </div>
+          </div>
+          <div class="two">
+            <div class="fld">
+              <label>Where are your customers? <span class="req">*</span></label>
+              <input class="inp" id="f_where" type="text" placeholder="e.g. Philadelphia, PA">
+            </div>
+            <div class="fld">
+              <label>Current site, if any</label>
+              <input class="inp" id="f_url" type="text" placeholder="yoursite.com (or leave blank)">
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 2 — GOALS -->
+        <div class="bpanel" data-panel="1">
+          <div class="qnum">02 / 04 · The goal</div>
+          <h3>What should this site <em>do</em>?</h3>
+          <p class="qsub">Pick the build that fits, then tell me the one outcome that would make this a win.</p>
+          <div class="fld">
+            <label>Which build? <span class="req">*</span></label>
+            <div class="chips" id="tierChips">
+              <span class="chip" data-tier="Launch">Launch <span class="cp">$750</span></span>
+              <span class="chip" data-tier="The Website">The Website <span class="cp">$1,500</span></span>
+              <span class="chip" data-tier="Custom build">Custom <span class="cp">$2,500+</span></span>
+              <span class="chip" data-tier="Not sure yet">Not sure yet</span>
+            </div>
+          </div>
+          <div class="fld">
+            <label>What's the #1 thing a visitor should do? <span class="req">*</span></label>
+            <div class="chips" id="goalChips">
+              <span class="chip" data-goal="Call or text me">Call or text me</span>
+              <span class="chip" data-goal="Fill out a form">Fill out a form</span>
+              <span class="chip" data-goal="Book an appointment">Book an appointment</span>
+              <span class="chip" data-goal="Buy something">Buy something</span>
+            </div>
+          </div>
+          <div class="fld">
+            <label>Anything I should know? <span style="color:var(--fg-faint)">(optional)</span></label>
+            <textarea class="ta" id="f_notes" placeholder="Competitors that bug you, pages you need, a deadline, brand colors. Whatever's on your mind."></textarea>
+          </div>
+        </div>
+
+        <!-- STEP 3 — VIBE (the centerpiece) -->
+        <div class="bpanel" data-panel="2">
+          <div class="qnum">03 / 04 · The vibe</div>
+          <h3>Drop three sites you love.</h3>
+          <p class="qsub">This is how I lock your direction without a single back-and-forth. They don't have to be in your industry. Just point at what feels right.</p>
+          <div class="vibe-help">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+            <span>Paste any URL. A one-line note on <i>why</i> you like it is optional but it sharpens the result.</span>
+          </div>
+          <div class="slots" id="slots">
+            <div class="slot" data-slot="0">
+              <span class="snum">01</span>
+              <div class="slabel">Reference</div>
+              <input type="text" class="site-in" placeholder="stripe.com" autocomplete="off">
+              <textarea class="why-in" rows="1" placeholder="Why this one?"></textarea>
+            </div>
+            <div class="slot" data-slot="1">
+              <span class="snum">02</span>
+              <div class="slabel">Reference</div>
+              <input type="text" class="site-in" placeholder="linear.app" autocomplete="off">
+              <textarea class="why-in" rows="1" placeholder="Why this one?"></textarea>
+            </div>
+            <div class="slot" data-slot="2">
+              <span class="snum">03</span>
+              <div class="slabel">Reference</div>
+              <input type="text" class="site-in" placeholder="a competitor you like" autocomplete="off">
+              <textarea class="why-in" rows="1" placeholder="Why this one?"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 4 — REVIEW -->
+        <div class="bpanel" data-panel="3">
+          <div class="qnum">04 / 04 · Review</div>
+          <h3>Here's what I'll work from.</h3>
+          <p class="qsub">Everything in writing, on the record, exactly how the whole process runs. Look it over and send it.</p>
+          <div class="review-grid" id="review"></div>
+          <p class="bnote">You'll get a written confirmation and a timeline before any work, and a full refund if the preview isn't right. <b>No card needed to start.</b></p>
+          <!-- submission error (hidden until POST fails) -->
+          <p id="berror" style="display:none;color:var(--orange);background:rgba(255,90,0,.08);border:1px solid rgba(255,90,0,.3);border-radius:var(--r-sm);padding:.9rem 1.1rem;margin-top:1.1rem;font-size:.93rem;font-weight:500;line-height:1.5;text-align:center"></p>
+        </div>
+
+        <!-- DONE -->
+        <div class="bpanel" data-panel="4">
+          <div class="done">
+            <div class="dcheck"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+            <h3>Brief received.</h3>
+            <p>That's genuinely the whole onboarding. I'll send a written confirmation with your timeline shortly, and start the research today.</p>
+            <span class="dmeta"><span class="dl"></span>You'll receive a payment link to secure your slot.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- nav -->
+      <div class="bnav" id="bnav">
+        <button class="back" id="bBack" disabled><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg> Back</button>
+        <div class="spacer"></div>
+        <button class="next" id="bNext">Continue <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      </div>
+    </div>
+    <p class="bnote rv" style="margin-top:22px">Prefer email? <a href="mailto:hello@odbaweb.com" style="color:var(--orange);font-weight:600">hello@odbaweb.com</a>. Same async process, same flat price.</p>
+  </div>
+</section>
+
+<!-- ===== CONTENT (restored) ===== -->
+<section class="sec content">
+  <div class="wrap">
+    <div class="grid">
+      <div class="rv">
+        <span class="kicker mono"><span class="ln"></span>Paid product · Content engine</span>
+        <h2 class="h2">Meet <span class="o">Ghost.</span></h2>
+        <p class="lead">Most AI content reads like AI content. Ghost doesn't. It's tuned to your voice and built to cut the filler that gives AI away. You feed it your notes. It hands back copy that sounds like you wrote it.</p>
+        <p class="lead" style="margin-top:.9rem">Ghost is locked. Pick a plan to get in.</p>
+        <a class="btn btn-fill" href="ghost-unlock.html" style="margin-top:1.6rem">Unlock Ghost <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <p class="addfine">Got an old blog to refresh? One-time project. <a href="mailto:hello@odbaweb.com" style="color:var(--orange);font-weight:600">Get a quote.</a></p>
+      </div>
+      <div class="rows rv">
+        <div class="ac">
+          <div><div class="nm">Basic</div><div class="ds">2 posts a week. SEO. Your voice.</div></div>
+          <div class="pr">$150<small>/mo</small></div>
+        </div>
+        <div class="ac">
+          <div><div class="nm">Professional</div><div class="ds">4 posts a week. Custom voice. Full keyword strategy.</div></div>
+          <div class="pr">$300<small>/mo</small></div>
+        </div>
+        <div class="ac">
+          <div><div class="nm">Premium</div><div class="ds">Daily posts. Social snippets. The whole strategy.</div></div>
+          <div class="pr">$500<small>/mo</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CARE ===== -->
+<section class="sec care">
+  <div class="wrap">
+    <div class="grid">
+      <div class="left rv">
+        <span class="kicker mono"><span class="ln"></span>After launch · Optional</span>
+        <h2 class="h2">Set it, then <span class="o">grow it.</span></h2>
+        <div class="price"><span class="amt">$99</span><span class="per">/ month</span></div>
+        <p class="cancel"><b>Cancel anytime. Pause anytime.</b> Most clients keep it. Nobody's locked in.</p>
+        <a class="btn btn-fill" href="#start">Add Care &amp; Growth <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <p style="margin-top:1rem;font-size:.8rem;color:var(--fg-faint)">Or add it at checkout. <a href="[Payment Link - Care &amp; Growth $99/mo]" style="color:var(--orange);font-weight:600">Subscribe now, $99/mo</a></p>
+        <p class="note"><b>One line instead of five bills.</b> Hosting, edits, and ongoing SEO rolled into a single flat rate. No separate platform fee, no per-change invoices.</p>
+      </div>
+      <div class="feats rv">
+        <div class="cfeat">
+          <div class="ci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M2 9h20M6 14h4"/></svg></div>
+          <h4>Hosting &amp; SSL handled</h4>
+          <p>Fast managed hosting, SSL, and automatic backups. Your site stays online, secure, and quick.</p>
+        </div>
+        <div class="cfeat">
+          <div class="ci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></div>
+          <h4>Unlimited small edits</h4>
+          <p>New hours, a price change, a fresh photo. Send it over, it's done. No change-order invoices.</p>
+        </div>
+        <div class="cfeat">
+          <div class="ci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 14 4-4 3 3 5-6"/></svg></div>
+          <h4>Ongoing SEO &amp; content</h4>
+          <p>Monthly content in your voice and steady on-page tuning, so your ranking climbs instead of stalling.</p>
+        </div>
+        <div class="cfeat">
+          <div class="ci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg></div>
+          <h4>First in line for new work</h4>
+          <p>Need a new section or page? Care clients jump the queue and get a better rate on anything bigger.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GUARANTEE ===== -->
+<section class="sec guar">
+  <div class="gglow"></div>
+  <div class="wrap">
+    <div class="shield rv"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg></div>
+    <h2 class="rv">Don't love your preview? <span class="o">Full refund.</span></h2>
+    <p class="rv">You see the finished site before you pay a cent toward going live. If it's not right and we can't fix it, you walk away. <strong>You pay nothing, you keep nothing, and we part as friends.</strong> No fine print, no hard feelings.</p>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="sec faq" id="faq">
+  <div class="wrap">
+    <div class="grid">
+      <div class="rv">
+        <span class="kicker mono"><span class="ln"></span>Questions</span>
+        <h2 class="h2">No call needed. <span class="o">Just answers.</span></h2>
+        <p class="lead">Everything you'd normally ask on a discovery call, answered right here.</p>
+      </div>
+      <div class="rv">
+        <div class="qa open">
+          <button>Do I really not need to get on a call? <span class="pm">+</span></button>
+          <div class="ans"><p>Nope, and that's the whole idea. You fill out a brief, I research and build, and you review everything in writing. It keeps the work fast and on the record. If you ever want to talk something through you can, but nothing about the process requires a meeting.</p></div>
+        </div>
+        <div class="qa">
+          <button>What if I don't like the design? <span class="pm">+</span></button>
+          <div class="ans"><p>Every build comes with rounds of changes, and we keep refining until it's right. Want more passes? They're a flat $50 each. And if it's just not working out before launch, you get a full refund. You're never stuck with something you don't love.</p></div>
+        </div>
+        <div class="qa">
+          <button>Do I own the site when it's finished? <span class="pm">+</span></button>
+          <div class="ans"><p>Yes, completely. No lock-in. The finished site is yours to host anywhere you like. Care &amp; Growth ($99/mo) is a separate, optional plan if you'd rather I handle the hosting, edits, and SEO for you. Cancel whenever.</p></div>
+        </div>
+        <div class="qa">
+          <button>How fast will I actually get my site? <span class="pm">+</span></button>
+          <div class="ans"><p>A one-page Launch is ready in 48 hours. The Website runs about a week, and custom builds (online stores, portals) take up to two weeks. You get a clear timeline before any work starts, and the clock starts once your brief and content are in.</p></div>
+        </div>
+        <div class="qa">
+          <button>Is SEO really included, or is it an upsell? <span class="pm">+</span></button>
+          <div class="ans"><p>Included in every build, full stop. Market research, keyword strategy, and on-page work are baked in from the start. I don't charge extra for the thing that actually helps people find you.</p></div>
+        </div>
+        <div class="qa">
+          <button>What don't you take on? <span class="pm">+</span></button>
+          <div class="ans"><p>I stick to fast, conversion-focused business websites. I don't take on huge ongoing software builds or anything that needs a full engineering team. If your project's outside my lane, I'll tell you up front instead of overpromising.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BOOK (OLED, Designjoy-style) ===== -->
+<section class="sec book" id="book">
+  <div class="wrap">
+    <div class="bgrid">
+      <div class="bleft rv">
+        <div class="blogo"><img src="odbaweb_logo.png" alt="odba web logo"><span>o<span class="o">db</span>a web</span></div>
+        <h2>See if a build slot <span class="o">is open</span> <span class="it">(grab it fast)</span></h2>
+        <p>I only take a fixed number of builds each week. Pick an open week, choose your build, and you're in the queue. No call to book.</p>
+      </div>
+
+      <div class="cal rv" id="cal">
+        <div class="chead">
+          <div class="mtitle" id="calTitle">June <span>2026</span></div>
+          <div class="nav">
+            <button id="calPrev" aria-label="Previous month"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+            <button id="calNext" aria-label="Next month"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>
+          </div>
+        </div>
+        <div class="dow"><span>SUN</span><span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span>SAT</span></div>
+        <div class="grid" id="calGrid"></div>
+
+        <div class="slotwrap">
+          <div class="slothead">
+            <div class="sd" id="slotDate">Pick a week</div>
+            <div class="wcap" id="slotCap"></div>
+          </div>
+          <div id="slotBody">
+            <div class="emptypick">Select an open day to see which build slots are still available that week.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer folded into the dark zone, like Designjoy -->
+    <footer>
+      <div class="wrap foot" style="padding:0">
+        <div>
+          <a class="brand" href="#top"><img src="odbaweb_logo.png" alt="odba web logo"><span>o<span class="o">db</span>a web</span></a>
+          <div class="cr">© 2026 odba web. Built to convert.</div>
+        </div>
+        <nav class="foot-mid">
+          <a href="#how">How it works</a>
+          <a href="#work">Work</a>
+          <a href="#offer">Pricing</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <div class="fmail">Get in touch<br><a href="mailto:hello@odbaweb.com">hello@odbaweb.com</a></div>
+      </div>
+    </footer>
+  </div>
+</section>
+
+<script>
+const hd=document.getElementById('hd');
+addEventListener('scroll',()=>hd.classList.toggle('stuck',scrollY>16),{passive:true});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+document.querySelectorAll('.qa button').forEach(b=>b.addEventListener('click',()=>{
+  const qa=b.parentElement;const open=qa.classList.contains('open');
+  document.querySelectorAll('.qa').forEach(x=>x.classList.remove('open'));
+  if(!open)qa.classList.add('open');
+}));
+
+/* ===== BRIEF controller ===== */
+(function(){
+  const TOTAL=4; // panels 0..3 are steps, 4 is the done screen
+  let step=0;
+  const panels=[...document.querySelectorAll('.bpanel')];
+  const psteps=[...document.querySelectorAll('#bprog .pstep')];
+  const back=document.getElementById('bBack');
+  const next=document.getElementById('bNext');
+  const prog=document.getElementById('bprog');
+  const card=document.querySelector('.briefcard');
+
+  // tier + goal chip selection (single-select each)
+  function wireChips(id,attr){
+    document.querySelectorAll('#'+id+' .chip').forEach(c=>{
+      c.addEventListener('click',()=>{
+        document.querySelectorAll('#'+id+' .chip').forEach(x=>x.classList.remove('sel'));
+        c.classList.add('sel');
+      });
+    });
+  }
+  wireChips('tierChips','tier');
+  wireChips('goalChips','goal');
+
+  // deep-link: pricing buttons preselect a tier
+  document.querySelectorAll('[data-tier]').forEach(btn=>{
+    if(btn.classList.contains('chip'))return;
+    btn.addEventListener('click',()=>{
+      const t=btn.getAttribute('data-tier');
+      const chip=[...document.querySelectorAll('#tierChips .chip')].find(c=>c.getAttribute('data-tier')===t);
+      if(chip){document.querySelectorAll('#tierChips .chip').forEach(x=>x.classList.remove('sel'));chip.classList.add('sel');}
+    });
+  });
+
+  // fill-state on the three vibe slots
+  document.querySelectorAll('#slots .slot').forEach(slot=>{
+    const url=slot.querySelector('.site-in');
+    url.addEventListener('input',()=>slot.classList.toggle('filled',url.value.trim().length>0));
+  });
+
+  function show(n){
+    panels.forEach((p,i)=>p.classList.toggle('on',i===n));
+    psteps.forEach((p,i)=>{
+      p.classList.toggle('active',i===n);
+      p.classList.toggle('done',i<n);
+    });
+    back.disabled = n===0 || n>=TOTAL;
+    if(n===TOTAL-1){next.innerHTML='Send the brief <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg>';}
+    else if(n<TOTAL){next.innerHTML='Continue <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';}
+    if(n>=TOTAL){ // done screen
+      document.getElementById('bnav').style.display='none';
+      prog.style.display='none';
+    }
+    step=n;
+  }
+
+  function val(id){return (document.getElementById(id).value||'').trim();}
+  function sel(id){const c=document.querySelector('#'+id+' .chip.sel');return c?c.getAttribute('data-'+(id==='tierChips'?'tier':'goal')):'';}
+
+  function validate(n){
+    // clear prior highlights
+    document.querySelectorAll('.inp').forEach(i=>i.style.borderColor='');
+    if(n===0){
+      const reqs=['f_name','f_what','f_where'];
+      let ok=true,first=null;
+      reqs.forEach(id=>{if(!val(id)){ok=false;const el=document.getElementById(id);el.style.borderColor='var(--orange)';if(!first)first=el;}});
+      if(first)first.focus();
+      return ok;
+    }
+    if(n===1){
+      if(!sel('tierChips')){flash('#tierChips');return false;}
+      if(!sel('goalChips')){flash('#goalChips');return false;}
+      return true;
+    }
+    if(n===2){
+      const filled=[...document.querySelectorAll('#slots .site-in')].filter(i=>i.value.trim()).length;
+      if(filled<3){
+        document.querySelectorAll('#slots .slot').forEach(s=>{if(!s.querySelector('.site-in').value.trim())s.style.borderColor='var(--orange)';});
+        return false;
+      }
+      return true;
+    }
+    return true;
+  }
+  function flash(sel){const el=document.querySelector(sel);if(!el)return;el.animate([{opacity:.4},{opacity:1}],{duration:300});}
+
+  function buildReview(){
+    const sites=[...document.querySelectorAll('#slots .slot')].map((s,i)=>{
+      const u=s.querySelector('.site-in').value.trim();
+      const w=s.querySelector('.why-in').value.trim();
+      return u?(u+(w?', '+w:'')):'';
+    }).filter(Boolean).join('\n');
+    const rows=[
+      ['Business', val('f_name') || em()],
+      ['What', val('f_what') || em()],
+      ['Where', val('f_where') || em()],
+      ['Build', sel('tierChips') || em()],
+      ['Main goal', sel('goalChips') || em()],
+      ['Vibe refs', sites || em()],
+    ];
+    if(val('f_url')) rows.splice(3,0,['Current site', val('f_url')]);
+    if(val('f_notes')) rows.push(['Notes', val('f_notes')]);
+    document.getElementById('review').innerHTML = rows.map(r=>
+      '<div class="rrow"><div class="rk">'+r[0]+'</div><div class="rv-val">'+r[1]+'</div></div>'
+    ).join('');
+  }
+  function em(){return '<span class="empty">not given</span>';}
+
+  next.addEventListener('click',async ()=>{
+    if(step<TOTAL-1){
+      if(!validate(step))return;
+      const target=step+1;
+      if(target===TOTAL-1)buildReview();
+      show(target);
+      card.scrollIntoView({behavior:'smooth',block:'center'});
+    } else if(step===TOTAL-1){
+      // Collect and submit the brief
+      const payload = {
+        name: val('f_name'),
+        what: val('f_what'),
+        where: val('f_where'),
+        url: val('f_url'),
+        tier: sel('tierChips'),
+        goal: sel('goalChips'),
+        vibe1_url: document.querySelectorAll('#slots .site-in')[0]?.value?.trim() || '',
+        vibe1_why: document.querySelectorAll('#slots .why-in')[0]?.value?.trim() || '',
+        vibe2_url: document.querySelectorAll('#slots .site-in')[1]?.value?.trim() || '',
+        vibe2_why: document.querySelectorAll('#slots .why-in')[1]?.value?.trim() || '',
+        vibe3_url: document.querySelectorAll('#slots .site-in')[2]?.value?.trim() || '',
+        vibe3_why: document.querySelectorAll('#slots .why-in')[2]?.value?.trim() || '',
+        notes: val('f_notes'),
+        submitted: new Date().toISOString()
+      };
+      try {
+        // REPLACE: form submission endpoint
+        const res = await fetch('https://formspree.io/f/your-form-id', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        if (!res.ok) throw new Error('Submission failed');
+        show(TOTAL); // done — only on success
+        card.scrollIntoView({behavior:'smooth',block:'center'});
+      } catch(e) {
+        console.error('Brief submission error:', e);
+        // Show a visible error state — do NOT show the done screen on failure
+        const errEl = document.getElementById('berror');
+        if (errEl) {
+          errEl.textContent = 'Something went wrong while sending. Please check your connection and try again, or email hello@odbaweb.com directly.';
+          errEl.style.display = 'block';
+          errEl.scrollIntoView({behavior:'smooth',block:'center'});
+        }
+      }
+    }
+  });
+  back.addEventListener('click',()=>{if(step>0)show(step-1);});
+
+  // allow Enter to advance from text inputs (not textareas)
+  card.addEventListener('keydown',e=>{
+    if(e.key==='Enter' && e.target.classList.contains('inp')){e.preventDefault();next.click();}
+  });
+})();
+
+/* ============================================================
+   BOOK-TO-BUILD CALENDAR
+   Capacity per period:
+     $750     -> 1 slot per WEEK   (tier key: launch)
+     $1,500   -> 1 slot per WEEK   (tier key: website)
+     $2,500+  -> 1 slot per MONTH  (tier key: custom)
+   ------------------------------------------------------------
+   To mark something as booked, add an entry to BOOKED below.
+   Weekly tiers use the ISO-week key "YYYY-Www".
+   Monthly tier uses the month key "YYYY-MM".
+   Examples:
+     BOOKED.launch.push('2026-W24');   // $750 taken that week
+     BOOKED.website.push('2026-W25');  // $1,500 taken that week
+     BOOKED.custom.push('2026-06');    // $2,500+ taken that month
+   Leave the arrays empty for "all open".
+   ============================================================ */
+(function(){
+  const cal = document.getElementById('cal');
+  if(!cal) return;
+
+  // ---- CONFIG ----
+  const START = new Date(); START.setHours(0,0,0,0); // bookable from today forward
+  const TIERS = [
+    {key:'launch',  name:'Launch',     price:'$750',    chip:'Launch',       per:'week',  meta:'1 / week'},
+    {key:'website', name:'The Website',price:'$1,500',  chip:'The Website',  per:'week',  meta:'1 / week'},
+    {key:'custom',  name:'Custom',     price:'$2,500+', chip:'Custom build', per:'month', meta:'1 / month'},
+  ];
+  const BOOKED = { launch:[], website:[], custom:[] }; // <- edit these to close slots
+
+  // ---- date helpers ----
+  function isoWeek(d){
+    const t=new Date(Date.UTC(d.getFullYear(),d.getMonth(),d.getDate()));
+    const day=t.getUTCDay()||7; t.setUTCDate(t.getUTCDate()+4-day);
+    const ys=new Date(Date.UTC(t.getUTCFullYear(),0,1));
+    const wk=Math.ceil((((t-ys)/86400000)+1)/7);
+    return t.getUTCFullYear()+'-W'+String(wk).padStart(2,'0');
+  }
+  const monthKey = d => d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0');
+  function tierOpenOn(tier,d){
+    if(tier.per==='week')  return !BOOKED[tier.key].includes(isoWeek(d));
+    return !BOOKED[tier.key].includes(monthKey(d));
+  }
+  const anyTierOpenOn = d => TIERS.some(t=>tierOpenOn(t,d));
+
+  const MN=['January','February','March','April','May','June','July','August','September','October','November','December'];
+  let view = new Date(START.getFullYear(), START.getMonth(), 1);
+  let selected = null;
+
+  const grid=document.getElementById('calGrid'),
+        title=document.getElementById('calTitle'),
+        prevB=document.getElementById('calPrev'),
+        nextB=document.getElementById('calNext'),
+        slotDate=document.getElementById('slotDate'),
+        slotCap=document.getElementById('slotCap'),
+        slotBody=document.getElementById('slotBody');
+
+  // limit forward browsing to 3 months out
+  const MAXVIEW=new Date(START.getFullYear(),START.getMonth()+3,1);
+
+  function monthHasAnyOpen(y,m){
+    const last=new Date(y,m+1,0).getDate();
+    for(let dd=1;dd<=last;dd++){
+      const d=new Date(y,m,dd);
+      if(d>=START && anyTierOpenOn(d)) return true;
+    }
+    return false;
+  }
+
+  function render(){
+    const y=view.getFullYear(), m=view.getMonth();
+    title.innerHTML = MN[m]+' <span>'+y+'</span>';
+    prevB.disabled = (y===START.getFullYear() && m===START.getMonth());
+    nextB.disabled = (view.getFullYear()>MAXVIEW.getFullYear() || (view.getFullYear()===MAXVIEW.getFullYear() && view.getMonth()>=MAXVIEW.getMonth()));
+    grid.innerHTML='';
+    const firstDow=new Date(y,m,1).getDay();
+    const days=new Date(y,m+1,0).getDate();
+    for(let i=0;i<firstDow;i++){const c=document.createElement('div');c.className='day pad';grid.appendChild(c);}
+    for(let dd=1;dd<=days;dd++){
+      const d=new Date(y,m,dd);
+      const c=document.createElement('div'); c.textContent=dd;
+      const isToday = d.getTime()===START.getTime();
+      if(d<START){ c.className='day past'; }
+      else if(!anyTierOpenOn(d)){ c.className='day full'; }
+      else {
+        c.className='day avail'+(isToday?' today':'');
+        if(selected && d.getTime()===selected.getTime()) c.className='day sel';
+        const mk=document.createElement('span'); mk.className='dotmk'; c.appendChild(mk);
+        c.addEventListener('click',()=>{selected=d;render();showTiers(d);});
+      }
+      grid.appendChild(c);
+    }
+    if(!monthHasAnyOpen(y,m) && !(y===START.getFullYear()&&m===START.getMonth())){
+      // visually it's all struck-through already; nothing extra needed
+    }
+  }
+
+  function showTiers(d){
+    const wk=isoWeek(d), mo=monthKey(d);
+    slotDate.innerHTML = d.toLocaleDateString('en-US',{weekday:'long',month:'short',day:'numeric'});
+    slotCap.textContent = 'Week '+wk.split('-W')[1];
+    const openCount = TIERS.filter(t=>tierOpenOn(t,d)).length;
+    if(openCount===0){
+      slotBody.innerHTML='<div class="monthfull">That week is fully booked. Try another open day.</div>';
+      return;
+    }
+    const wrap=document.createElement('div'); wrap.className='tiers';
+    TIERS.forEach(t=>{
+      const open=tierOpenOn(t,d);
+      const b=document.createElement('button');
+      b.className='tier'+(open?'':' gone'); b.disabled=!open;
+      b.innerHTML='<span class="tname">'+t.name+' <span class="tprice">'+t.price+'</span></span>'+
+        '<span class="tmeta">'+(open?t.meta:'taken this '+t.per)+'</span>'+
+        (open?'<span class="tgo"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>':'');
+      if(open){
+        b.addEventListener('click',()=>{
+          // preselect the matching chip in the brief, then scroll to it
+          const chip=[...document.querySelectorAll('#tierChips .chip')].find(c=>c.getAttribute('data-tier')===t.chip);
+          if(chip){document.querySelectorAll('#tierChips .chip').forEach(x=>x.classList.remove('sel'));chip.classList.add('sel');}
+          document.getElementById('start').scrollIntoView({behavior:'smooth',block:'start'});
+        });
+      }
+      wrap.appendChild(b);
+    });
+    slotBody.innerHTML=''; slotBody.appendChild(wrap);
+  }
+
+  prevB.addEventListener('click',()=>{if(prevB.disabled)return;view=new Date(view.getFullYear(),view.getMonth()-1,1);render();});
+  nextB.addEventListener('click',()=>{if(nextB.disabled)return;view=new Date(view.getFullYear(),view.getMonth()+1,1);render();});
+  render();
+})();
+
+</script>
+</body>
+</html>
