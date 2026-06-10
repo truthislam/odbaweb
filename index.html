@@ -732,27 +732,7 @@ footer{border-top:1px solid var(--line);padding:46px 0 40px}
 </section>
 
 
-<!-- ===== SOCIAL PROOF ===== -->
-<!-- REPLACE: real client testimonials required -->
-<section class="sec proof" style="display:none">
-  <div class="wrap">
-    <div class="proof-intro rv" style="text-align:center;max-width:640px;margin:0 auto">
-      <span class="kicker mono" style="justify-content:center"><span class="ln"></span>What clients say</span>
-      <h2 class="h2">Real builders. <span class="o">Real results.</span></h2>
-    </div>
-    <div class="proof-grid rv">
-      <blockquote class="tquote placeholder">
-        <p>"Your testimonial could be here. Every build ships with a follow-up to collect real feedback after launch."</p>
-      </blockquote>
-      <blockquote class="tquote placeholder">
-        <p>"Another client result will be featured here once the follow-up wraps. Real feedback only, no fabricated quotes."</p>
-      </blockquote>
-      <blockquote class="tquote placeholder">
-        <p>"A third testimonial slot, reserved for actual client words collected after going live."</p>
-      </blockquote>
-    </div>
-  </div>
-</section>
+
 
 <!-- ===== OFFER ===== -->
 <section class="sec offer" id="offer">
@@ -1160,38 +1140,10 @@ footer{border-top:1px solid var(--line);padding:46px 0 40px}
   </div>
 </section>
 
-<!-- ===== BOOK (OLED, Designjoy-style) ===== -->
+<!-- ===== BOOK (footer zone) ===== -->
 <section class="sec book" id="book">
   <div class="wrap">
-    <div class="bgrid">
-      <div class="bleft rv">
-        <div class="blogo"><img src="odbaweb_logo.png" alt="odba web logo"><span>o<span class="o">db</span>a web</span></div>
-        <h2>See if a build slot <span class="o">is open</span> <span class="it">(grab it fast)</span></h2>
-        <p>I only take a fixed number of builds each week. Pick an open week, choose your build, and you're in the queue. No call to book.</p>
-      </div>
-
-      <div class="cal rv" id="cal">
-        <div class="chead">
-          <div class="mtitle" id="calTitle">June <span>2026</span></div>
-          <div class="nav">
-            <button id="calPrev" aria-label="Previous month"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
-            <button id="calNext" aria-label="Next month"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>
-          </div>
-        </div>
-        <div class="dow"><span>SUN</span><span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span>SAT</span></div>
-        <div class="grid" id="calGrid"></div>
-
-        <div class="slotwrap">
-          <div class="slothead">
-            <div class="sd" id="slotDate">Pick a week</div>
-            <div class="wcap" id="slotCap"></div>
-          </div>
-          <div id="slotBody">
-            <div class="emptypick">Select an open day to see which build slots are still available that week.</div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div>
 
     <!-- footer folded into the dark zone, like Designjoy -->
     <footer>
@@ -1357,7 +1309,7 @@ document.querySelectorAll('.qa button').forEach(b=>b.addEventListener('click',()
       };
       try {
         // REPLACE: form submission endpoint
-        const res = await fetch('https://formspree.io/f/your-form-id', {
+        const res = await fetch('https://formspree.io/f/mqeolnvo', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload)

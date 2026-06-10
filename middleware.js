@@ -72,8 +72,8 @@ export default async function middleware(req) {
       return Response.redirect(url, 302);
     }
 
-    // If valid, do nothing and let the request proceed
-    return;
+    // If valid, explicitly allow the request to proceed
+    return new Response(null, { headers: { 'x-middleware-next': '1' } });
     
   } catch (err) {
     console.error('Middleware verification error:', err);
