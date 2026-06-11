@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>odba web · websites that get the call</title>
+<title>odba web · websites built to get the call</title>
 <meta name="description" content="It's just me. No agency, no runaround. I learn your market, build you a fast site made to get the call, and hand it over. One flat price, no meetings, full refund if you don't love it.">
-<meta property="og:title" content="odba web · websites that get the call">
+<meta property="og:title" content="odba web · websites built to get the call">
 <meta property="og:description" content="Market research, conversion-built design, and SEO baked in. One flat price. No meetings. Live in days.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,7 +24,7 @@
   "makesOffer": [
     {"@type": "Offer", "name": "Launch", "price": "750", "priceCurrency": "USD"},
     {"@type": "Offer", "name": "The Website", "price": "1500", "priceCurrency": "USD"},
-    {"@type": "Offer", "name": "Care & Growth", "price": "99", "priceCurrency": "USD", "priceSpecification": {"@type": "UnitPriceSpecification", "billingDuration": "P1M"}}
+    {"@type": "Offer", "name": "Care & Growth", "price": "149", "priceCurrency": "USD", "priceSpecification": {"@type": "UnitPriceSpecification", "billingDuration": "P1M"}}
   ]
 }
 </script>
@@ -142,7 +142,7 @@ header.stuck{background:rgba(250,250,250,.82);backdrop-filter:blur(18px);-webkit
 .bchrome{height:40px;display:flex;align-items:center;gap:7px;padding:0 16px;background:var(--card-2);border-bottom:1px solid var(--line-2)}
 .bchrome .dot{width:9px;height:9px;border-radius:50%;background:#dadada}
 .bchrome .burl{margin-left:14px;flex:1;max-width:300px;height:20px;border-radius:6px;background:#ededed;display:flex;align-items:center;padding:0 12px;font-family:var(--mono);font-size:.6rem;color:var(--fg-faint);letter-spacing:.04em}
-.bscreen{display:block;width:100%}
+.bscreen{display:block;width:100%;height:auto}
 .live-tag{position:absolute;top:18px;right:-10px;z-index:3;display:inline-flex;align-items:center;gap:.45rem;
   background:var(--card);border:1px solid var(--line);border-radius:100px;padding:.5rem .9rem;font-size:.76rem;color:var(--fg-dim);
   box-shadow:0 18px 40px -18px rgba(0,0,0,.8);font-weight:500}
@@ -151,7 +151,7 @@ header.stuck{background:rgba(250,250,250,.82);backdrop-filter:blur(18px);-webkit
 @media(max-width:560px){.live-tag{display:none}}
 
 /* ===== MARQUEE ===== */
-.strip{border-block:1px solid var(--line);background:var(--raise);overflow:hidden;padding:18px 0;margin-top:90px;
+.strip{border-block:1px solid var(--line);background:var(--raise);overflow:hidden;padding:18px 0;margin-top:64px;
   -webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
 @media(prefers-reduced-motion:no-preference){
   .track{animation:run 38s linear infinite}
@@ -162,8 +162,18 @@ header.stuck{background:rgba(250,250,250,.82);backdrop-filter:blur(18px);-webkit
 .track .row b{font-family:var(--mono);text-transform:uppercase;letter-spacing:.18em;font-size:.76rem;font-weight:400;color:var(--fg-dim)}
 .track .row i{width:5px;height:5px;border-radius:50%;background:var(--orange);display:block;flex-shrink:0}
 
+/* ===== POSITIONING STRIP ===== */
+.posit{padding:72px 24px 64px;text-align:center}
+.posit p{font-family:var(--display);font-size:clamp(1.45rem,3.1vw,2.2rem);font-weight:700;letter-spacing:-.028em;line-height:1.22;max-width:26ch;margin:0 auto}
+.posit p span{color:var(--orange)}
+
 /* ===== SECTION ===== */
-.sec{padding:114px 0;position:relative}
+.sec{padding:72px 0;position:relative}
+/* collapse doubled padding where two sections meet */
+/* bordered sections act as dividers; trim the seam so gaps do not stack */
+.how, .offer, .care, .faq{padding-top:60px}
+.work{padding-bottom:60px}
+.brief{padding-bottom:60px}
 .kicker{display:inline-flex;align-items:center;gap:.7rem;color:var(--orange);margin-bottom:1.25rem}
 .kicker .ln{width:28px;height:1px;background:var(--orange)}
 .h2{font-family:var(--display);font-size:clamp(2rem,4.3vw,3.3rem);font-weight:700;letter-spacing:-.032em;line-height:1.04}
@@ -179,6 +189,7 @@ header.stuck{background:rgba(250,250,250,.82);backdrop-filter:blur(18px);-webkit
 .why .list .lab{font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--orange);padding-top:.55rem}
 .why .list h3{font-family:var(--display);font-size:1.5rem;font-weight:600;letter-spacing:-.025em;margin-bottom:.6rem}
 .why .list p{color:var(--fg-dim);font-size:1rem;line-height:1.62;max-width:48ch}
+@media(max-width:760px){.sec{padding:52px 0}}
 @media(max-width:880px){
   .why .grid{grid-template-columns:1fr;gap:38px}
   .why .intro{position:static}
@@ -203,21 +214,22 @@ header.stuck{background:rgba(250,250,250,.82);backdrop-filter:blur(18px);-webkit
 /* ===== WORK ===== */
 .work{border-top:1px solid var(--line)}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:50px}
-.proj{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--card);
+.proj{position:relative;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--card);
   transition:transform .4s cubic-bezier(.2,.7,.3,1),border-color .4s,box-shadow .4s;display:flex;flex-direction:column}
 .proj:hover{transform:translateY(-8px);border-color:#d4d4d4;box-shadow:var(--mock-sh)}
 .shot{position:relative;overflow:hidden;border-bottom:1px solid var(--line);background:#fff}
 .shot .top{height:26px;display:flex;align-items:center;gap:6px;padding:0 12px;border-bottom:1px solid var(--line-2);background:#f2f2f2;position:relative;z-index:2}
 .shot .top i{width:7px;height:7px;border-radius:50%;background:#dadada}
 .shot .top .u{margin-left:8px;font-family:var(--mono);font-size:.52rem;color:var(--fg-faint);letter-spacing:.04em}
-.shot img.scr{display:block;width:100%;height:auto}
+.shot img.scr{display:block;width:100%;height:auto;aspect-ratio:1600/811;object-fit:cover}
 .proj.soon{border-style:dashed;align-items:center;justify-content:center;text-align:center}
 .proj.soon .body{padding:0 28px}
 .proj .meta{padding:25px;flex:1;display:flex;flex-direction:column}
 .proj .tag{font-family:var(--mono);font-size:.6rem;text-transform:uppercase;letter-spacing:.14em;color:var(--fg-faint);margin-bottom:.75rem}
 .proj h3{font-family:var(--display);font-size:1.32rem;font-weight:600;letter-spacing:-.02em;margin-bottom:.55rem}
 .proj p{color:var(--fg-dim);font-size:.92rem;line-height:1.6}
-.proj .open{margin-top:auto;padding-top:16px;font-size:.85rem;font-weight:600;color:var(--orange);display:inline-flex;align-items:center;gap:.4rem}
+.proj .open{margin-top:auto;padding-top:16px;font-size:.85rem;font-weight:600;color:var(--orange);display:inline-flex;align-items:center;gap:.4rem;text-decoration:none}
+.proj .open::after{content:"";position:absolute;inset:0}
 @media(max-width:860px){.cards{grid-template-columns:1fr}}
 .stats{display:grid;grid-template-columns:repeat(4,1fr);background:var(--raise);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-top:20px}
 .stat{padding:36px 20px;text-align:center;border-right:1px solid var(--line-2)}
@@ -437,7 +449,7 @@ header.stuck{background:rgba(250,250,250,.82);backdrop-filter:blur(18px);-webkit
 .qa.open button .pm{transform:rotate(45deg);color:var(--orange)}
 .qa .ans{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.2,.7,.3,1)}
 .qa .ans p{color:var(--fg-dim);font-size:1rem;line-height:1.68;padding:0 0 1.45rem;max-width:62ch}
-.qa.open .ans{max-height:340px}
+.qa.open .ans{max-height:520px}
 @media(max-width:860px){.faq .grid{grid-template-columns:1fr;gap:28px}}
 
 /* ===== FINAL ===== */
@@ -534,6 +546,65 @@ footer{border-top:1px solid var(--line);padding:46px 0 40px}
 .book footer .fmail a{color:#fff}
 @media(max-width:900px){.book .bgrid{grid-template-columns:1fr;gap:38px}.book{padding-top:72px}}
 
+/* ===== GHOST (standalone product) ===== */
+.ghost-sec .panel{background:#000;color:#fff;border-radius:var(--r);padding:64px 56px;box-shadow:0 20px 68px #00000040}
+.ghost-sec .ghead{display:flex;align-items:center;gap:1rem;margin-bottom:1.1rem}
+.ghost-sec .gmark{width:52px;height:52px;flex-shrink:0}
+.ghost-sec .gmark svg{width:100%;height:100%;display:block}
+.ghost-sec .h2{color:#fff}
+.ghost-sec .glede{color:#a1a1aa;font-size:1.08rem;max-width:52ch;line-height:1.65;margin-top:.9rem}
+.ghost-sec .gtiers{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:2rem 0;max-width:560px}
+.ghost-sec .gtier{border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:20px 22px;background:#0a0a0a}
+.ghost-sec .gtier .tn{font-family:var(--mono);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:#71717a;margin-bottom:.5rem}
+.ghost-sec .gtier .tp{font-family:var(--display);font-size:1.9rem;font-weight:700;letter-spacing:-.03em;line-height:1}
+.ghost-sec .gtier .tp .per{font-family:var(--sans);font-size:.85rem;font-weight:400;color:#71717a;letter-spacing:0;margin-left:.2rem}
+.ghost-sec .gtier .td{color:#a1a1aa;font-size:.88rem;margin-top:.5rem}
+.ghost-sec .gtier.feat{border-color:var(--orange)}
+.ghost-sec .gtier.feat .tp{color:var(--orange)}
+.ghost-sec .panel{display:grid;grid-template-columns:1.04fr .96fr;gap:54px;align-items:center}
+/* Ghost product mock — show the tool, not an empty half */
+.gmock{background:#0a0a0a;border:1px solid rgba(255,255,255,.1);border-radius:16px;overflow:hidden;box-shadow:0 30px 80px -40px rgba(0,0,0,.9)}
+.gmock .mbar{display:flex;align-items:center;gap:7px;padding:13px 16px;border-bottom:1px solid rgba(255,255,255,.07);background:#0d0d0d}
+.gmock .mbar i{width:8px;height:8px;border-radius:50%;background:#1f1f1f;display:block}
+.gmock .mbar .mt{margin-left:8px;font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:#5c5c66}
+.gmock .mbody{padding:24px 26px 22px}
+.gmock .min{font-family:var(--mono);font-size:.78rem;color:#71717a;line-height:1.6;padding-bottom:16px;border-bottom:1px dashed rgba(255,255,255,.08);margin-bottom:16px}
+.gmock .min b{color:var(--orange);font-weight:500}
+.gmock .mout{font-size:1.02rem;line-height:1.66;color:#e7e7ea;letter-spacing:-.011em}
+.gmock .mout .caret{display:inline-block;width:8px;height:1.05em;background:var(--orange);vertical-align:text-bottom;margin-left:3px;border-radius:1px}
+@media(prefers-reduced-motion:no-preference){.gmock .mout .caret{animation:blink 1.1s steps(1) infinite}}
+.gmock .mfoot{display:flex;gap:14px;margin-top:18px;font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:#5c5c66}
+.gmock .mfoot b{color:#9a9aa3;font-weight:500}
+@media(max-width:980px){.ghost-sec .panel{grid-template-columns:1fr;gap:38px}}
+@media(max-width:760px){.ghost-sec .panel{padding:44px 26px}.ghost-sec .gtiers{grid-template-columns:1fr}}
+
+/* ===== BOOK closer ===== */
+.book .guarline{display:flex;align-items:flex-start;gap:.85rem;margin:1.6rem 0 1.9rem;color:#c7c7cf;font-size:.98rem;line-height:1.55;max-width:44ch}
+.book .guarline svg{flex-shrink:0;color:var(--orange);margin-top:2px}
+.book .guarline b{color:#fff;font-weight:600}
+.book .bacts{display:flex;gap:.85rem;flex-wrap:wrap;align-items:center}
+.book .btn-dark{background:#101013;color:#fff;border:1px solid #232329}
+.book .btn-dark:hover{border-color:#3a3a42;transform:translateY(-2px)}
+.book .bslots{margin-top:1.6rem;font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:#6a6a73;display:inline-flex;align-items:center;gap:.55rem}
+.book .bslots .dl{width:7px;height:7px;border-radius:50%;background:#22c55e;box-shadow:0 0 8px #22c55e}
+/* week-one timeline card */
+.tline{background:#0a0a0c;border:1px solid #1c1c20;border-radius:20px;padding:30px 30px 24px;box-shadow:0 40px 90px -50px rgba(0,0,0,.9)}
+.tline .th{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px}
+.tline .th .tt{font-family:var(--mono);font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:#6a6a73}
+.tline .th .tt b{color:var(--orange);font-weight:500}
+.tline .trow{display:grid;grid-template-columns:52px 1fr;gap:18px;padding:15px 0;border-top:1px solid #16161a;align-items:baseline}
+.tline .trow:first-of-type{border-top:none;padding-top:0}
+.tline .td{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;color:var(--orange);text-transform:uppercase;white-space:nowrap}
+.tline .tn{font-weight:600;font-size:.99rem;letter-spacing:-.015em;color:#fff;margin-bottom:.15rem}
+.tline .ts{color:#9a9aa3;font-size:.86rem;line-height:1.5}
+.tline .tfoot{margin-top:18px;padding-top:16px;border-top:1px dashed #1c1c20;color:#6a6a73;font-size:.82rem;line-height:1.5}
+.tline .tfoot b{color:#9a9aa3;font-weight:500}
+
+/* ===== STICKY MOBILE CTA ===== */
+.mcta{position:fixed;left:14px;right:14px;bottom:calc(14px + env(safe-area-inset-bottom));z-index:95;display:none}
+.mcta a{width:100%;justify-content:center;box-shadow:inset 0 1px 0 rgba(255,255,255,.34),0 16px 44px -10px rgba(255,90,0,.7),0 4px 14px rgba(0,0,0,.18)}
+@media(max-width:760px){body:not(.brief-inview) .mcta{display:flex}}
+
 </style>
 </head>
 <body>
@@ -543,11 +614,11 @@ footer{border-top:1px solid var(--line);padding:46px 0 40px}
   <div class="wrap nav">
     <a class="brand" href="#top"><img src="odbaweb_logo.png" alt="odba web logo"><span>o<span class="o">db</span>a web</span></a>
     <nav class="nav-mid">
-      <a href="#how">How it works</a>
       <a href="#work">Work</a>
+      <a href="#how">How it works</a>
+      <a href="#ghost">Ghost</a>
       <a href="#offer">Pricing</a>
       <a href="#faq">FAQ</a>
-      <a href="#book">Book</a>
     </nav>
     <a class="nav-cta" href="#start">Start your build</a>
   </div>
@@ -557,8 +628,8 @@ footer{border-top:1px solid var(--line);padding:46px 0 40px}
 <section class="hero" id="top">
   <div class="glow"></div>
   <span class="pill"><span class="blink"></span><span class="t">One person. Flat price. Full refund if it's not right.</span></span>
-  <h1>A website that <span class="hl mark">gets the call.</span></h1>
-  <p class="lede">I research your market, write the copy, and build a site made to get the call. Flat price. Preview before you pay. No meetings, ever.</p>
+  <h1>A website built to <span class="hl mark">get the call.</span></h1>
+  <p class="lede">I research your market, write your copy with Ghost, and build a site made to get the call. Flat price. Preview before you pay. No meetings, ever.</p>
   <div class="actions">
     <a class="btn btn-fill" href="#start">Start your build <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     <a class="btn btn-ghost" href="#work">See the work</a>
@@ -578,11 +649,7 @@ footer{border-top:1px solid var(--line);padding:46px 0 40px}
         <span class="dot"></span><span class="dot"></span><span class="dot"></span>
         <span class="burl">geminitax.co</span>
       </div>
-      <picture>
-        <source srcset="shot-gemini-home.avif" type="image/avif">
-        <source srcset="shot-gemini-home.webp" type="image/webp">
-        <img class="bscreen" src="shot-gemini-home.webp" alt="Gemini Accounting Services, a website built by odba web" width="1600" loading="eager">
-      </picture>
+      <img class="bscreen" src="shotgeminihome.webp" onerror="this.onerror=null;this.src='shot-gemini-home.webp'" alt="Gemini Accounting Services, a website built by odba web" width="1600" height="811" loading="eager" fetchpriority="high">
     </div>
   </div>
 </section>
@@ -590,43 +657,70 @@ footer{border-top:1px solid var(--line);padding:46px 0 40px}
 <!-- ===== MARQUEE ===== -->
 <div class="strip">
   <div class="track">
-    <div class="row"><i></i><b>Market research</b><i></i><b>Built to get the call</b><i></i><b>SEO baked in</b><i></i><b>No meetings</b><i></i><b>Flat pricing</b><i></i><b>Mobile first</b><i></i><b>Hosting handled</b><i></i><b>Yours to keep</b></div>
-    <div class="row"><i></i><b>Market research</b><i></i><b>Built to get the call</b><i></i><b>SEO baked in</b><i></i><b>No meetings</b><i></i><b>Flat pricing</b><i></i><b>Mobile first</b><i></i><b>Hosting handled</b><i></i><b>Yours to keep</b></div>
+    <div class="row"><i></i><b>Market research</b><i></i><b>Built to get the call</b><i></i><b>SEO baked in</b><i></i><b>Copy written for you</b><i></i><b>No meetings</b><i></i><b>Flat pricing</b><i></i><b>Mobile first</b><i></i><b>Hosting handled</b><i></i><b>Yours to keep</b></div>
+    <div class="row"><i></i><b>Market research</b><i></i><b>Built to get the call</b><i></i><b>SEO baked in</b><i></i><b>Copy written for you</b><i></i><b>No meetings</b><i></i><b>Flat pricing</b><i></i><b>Mobile first</b><i></i><b>Hosting handled</b><i></i><b>Yours to keep</b></div>
   </div>
 </div>
 
-<!-- ===== WHY (editorial) ===== -->
-<section class="sec why">
+<!-- ===== POSITIONING ===== -->
+<section class="posit">
+  <p class="rv">AI can build you a website in 30 seconds. <span>It can't get you a phone call.</span></p>
+</section>
+
+<!-- ===== WORK ===== -->
+<section class="sec work" id="work">
   <div class="wrap">
-    <div class="grid">
-      <div class="intro rv">
-        <span class="kicker mono"><span class="ln"></span>Why it works</span>
-        <h2 class="h2">No meetings by design. <span class="o">Not by accident.</span></h2>
-        <p class="lead">Every call is time you don't have. Every meeting is a delay. I cut all of it. You get faster work, everything in writing, nothing lost. No meetings isn't a shortcut. It's the whole point.</p>
-      </div>
-      <div class="list">
-        <div class="row rv">
-          <div class="lab">The research</div>
-          <div>
-            <h3>I do the homework first</h3>
-            <p>I dig into your market and your competitors and pull the exact phrases your customers already search for. We build for demand that's there, not for guesses.</p>
-          </div>
+    <div class="rv">
+      <span class="kicker mono"><span class="ln"></span>Recent work</span>
+      <h2 class="h2">The work speaks <span class="o">for itself.</span></h2>
+      <p class="lead">Three live client sites below. Click through, open them on your phone, time the load. That's the audit that matters.</p>
+    </div>
+    <div class="cards">
+      <article class="proj rv">
+        <div class="shot">
+          <div class="top"><i></i><i></i><i></i><span class="u">geminitax.co</span></div>
+          <img class="scr" src="shotgeminihome.webp" onerror="this.onerror=null;this.src='shot-gemini-home.webp'" alt="Gemini Accounting Services, a website built by odba web" width="1600" height="811" loading="lazy">
         </div>
-        <div class="row rv">
-          <div class="lab">The build</div>
-          <div>
-            <h3>I build it to get the call</h3>
-            <p>Fast, mobile-first, with your phone number always one tap away. Every choice on the page is aimed at moving someone from "just looking" to "booked."</p>
-          </div>
+        <div class="meta">
+          <div class="tag">Accounting · Pennsylvania</div>
+          <h3>Gemini Accounting</h3>
+          <p>A full redesign for a growing CPA firm. Fast, fully optimized, with a contact setup built to pull in leads.</p>
+          <a class="open" href="https://geminitax.co" target="_blank" rel="noopener">View the site <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
         </div>
-        <div class="row rv">
-          <div class="lab">The visibility</div>
-          <div>
-            <h3>Google can actually find you</h3>
-            <p>Proper local SEO, schema, and clean structure baked in from day one, so you show up when it counts. And it's never a surprise line on the invoice.</p>
-          </div>
+      </article>
+
+      <article class="proj rv">
+        <div class="shot">
+          <div class="top"><i></i><i></i><i></i><span class="u">discountdrivingschool.net</span></div>
+          <img class="scr" src="shotdrivehome.webp" onerror="this.onerror=null;this.src='shot-drive-home.webp'" alt="Discount Driving School, a website built by odba web" width="1600" height="811" loading="lazy">
         </div>
-      </div>
+        <div class="meta">
+          <div class="tag">Driving School · Seattle</div>
+          <h3>Discount Driving School</h3>
+          <p>A redesign plus a custom student and admin portal. Clean booking, mobile-first, and ready for real traffic.</p>
+          <a class="open" href="https://discountdrivingschool.net" target="_blank" rel="noopener">View the site <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+        </div>
+      </article>
+
+      <article class="proj rv">
+        <div class="shot">
+          <div class="top"><i></i><i></i><i></i><span class="u">nurhabits.com</span></div>
+          <img class="scr" src="shotnurhabitshome.webp" onerror="this.onerror=null;this.src='shot-nurhabits-home.webp'" alt="NurHabits, a website built by odba web" width="1600" height="811" loading="lazy">
+        </div>
+        <div class="meta">
+          <div class="tag">Wellness · Portland</div>
+          <h3>NurHabits</h3>
+          <p>A faith-based habit tracker that guides Muslims through staged daily routines. Bold landing page built to convert visitors into sign-ups.</p>
+          <a class="open" href="https://nurhabits.com" target="_blank" rel="noopener">View the site <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+        </div>
+      </article>
+    </div>
+
+    <div class="stats rv">
+      <div class="stat"><b>48<span class="o">h</span></b><span>Fastest launch</span></div>
+      <div class="stat"><b>2<span class="o">wk</span></b><span>Longest build</span></div>
+      <div class="stat"><b>0<span class="o">calls</span></b><span>Start to finish</span></div>
+      <div class="stat"><b><span class="o">$</span>0</b><span>Hidden fees</span></div>
     </div>
   </div>
 </section>
@@ -635,9 +729,9 @@ footer{border-top:1px solid var(--line);padding:46px 0 40px}
 <section class="sec how" id="how">
   <div class="wrap">
     <div class="rv">
-      <span class="kicker mono"><span class="ln"></span>The process</span>
-      <h2 class="h2">Three steps. <span class="o">Zero meetings.</span></h2>
-      <p class="lead">From the first form to your domain going live, everything happens in writing and in your browser. No calendar invites. Ever.</p>
+      <span class="kicker mono"><span class="ln"></span>How it works</span>
+      <h2 class="h2">No meetings <span class="o">by design.</span></h2>
+      <p class="lead">Brief, build, approve. Research, copy, and SEO are all on my end. Everything in writing, in your browser. No calendar invites. Ever.</p>
     </div>
     <div class="steps rv">
       <div class="step">
@@ -656,83 +750,52 @@ footer{border-top:1px solid var(--line);padding:46px 0 40px}
         <p>I send you a preview link. You give notes in writing, we tidy it up, and you launch. Want me to handle hosting too? Easy.</p>
       </div>
     </div>
-    <div class="rv">
-      <span class="nocall"><span class="ck"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> <b>No calls. No meetings.</b> Everything in writing, on your schedule.</span>
-    </div>
   </div>
 </section>
 
-<!-- ===== WORK ===== -->
-<section class="sec work" id="work">
+<!-- ===== GHOST ===== -->
+<section class="sec ghost-sec" id="ghost">
   <div class="wrap">
-    <div class="rv">
-      <span class="kicker mono"><span class="ln"></span>Recent work</span>
-      <h2 class="h2">The work speaks <span class="o">for itself.</span></h2>
-    </div>
-    <div class="cards">
-      <article class="proj rv">
-        <div class="shot">
-          <div class="top"><i></i><i></i><i></i><span class="u">geminitax.co</span></div>
-          <picture>
-            <source srcset="shot-gemini-home.avif" type="image/avif">
-            <source srcset="shot-gemini-home.webp" type="image/webp">
-            <img class="scr" src="shot-gemini-home.webp" alt="Gemini Accounting Services, a website built by odba web" loading="lazy">
-          </picture>
+    <div class="panel rv">
+      <div class="gleft">
+      <div class="ghead">
+        <span class="gmark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="none">
+            <rect x="1.9" y="1.9" width="44.2" height="44.2" rx="11.5" fill="#0a0a0a" stroke="rgba(255,255,255,.14)" stroke-width="1"/>
+            <path d="M24 12 C29.5 12 33 16 33 22 L33 31.4 C33 33.1 31.1 33.5 30.2 32.2 L29 30.2 C28.3 29.1 26.8 29.1 26.1 30.2 L24.9 32.2 C24.2 33.3 22.4 33.3 21.7 32.2 L20.5 30.2 C19.8 29.1 18.3 29.1 17.6 30.2 L16.4 32.2 C15.5 33.5 15 33.1 15 31.4 L15 22 C15 16 18.5 12 24 12 Z" fill="#FF5A00"/>
+            <circle cx="20.9" cy="21.6" r="2" fill="#0a0a0a"/>
+            <circle cx="27.1" cy="21.6" r="2" fill="#0a0a0a"/>
+          </svg>
+        </span>
+        <span class="kicker mono" style="margin-bottom:0"><span class="ln"></span>Ghost · A product by odba web</span>
+      </div>
+      <h2 class="h2">Writing AI <span class="o">can't fake.</span></h2>
+      <p class="glede">Ghost is a writing tool built on research into the human writing patterns AI gets wrong. Drafts in your voice, not robot filler. Written to be found, by people and by the AI answering them.</p>
+      <div class="gtiers">
+        <div class="gtier">
+          <div class="tn">Basic</div>
+          <div class="tp">$49<span class="per">/mo</span></div>
+          <div class="td">20 drafts a month.</div>
         </div>
-        <div class="meta">
-          <div class="tag">Accounting · Pennsylvania</div>
-          <h3>Gemini Accounting</h3>
-          <p>A full redesign for a growing CPA firm. Fast, fully optimized, with a contact setup that actually pulls in leads.</p>
-          <span class="open">View the site <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+        <div class="gtier feat">
+          <div class="tn">Pro</div>
+          <div class="tp">$99<span class="per">/mo</span></div>
+          <div class="td">Unlimited drafts.</div>
         </div>
-      </article>
-
-      <article class="proj rv">
-        <div class="shot">
-          <div class="top"><i></i><i></i><i></i><span class="u">discountdrivingschool.net</span></div>
-          <picture>
-            <source srcset="shot-drive-home.avif" type="image/avif">
-            <source srcset="shot-drive-home.webp" type="image/webp">
-            <img class="scr" src="shot-drive-home.webp" alt="Discount Driving School, a website built by odba web" loading="lazy">
-          </picture>
+      </div>
+      <a class="btn btn-fill" href="ghost-unlock.html">Unlock Ghost <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="gmock" aria-hidden="true">
+        <div class="mbar"><i></i><i></i><i></i><span class="mt">ghost · draft 01</span></div>
+        <div class="mbody">
+          <div class="min">brief <b>></b> emergency plumber · cleveland · goal: the call</div>
+          <p class="mout">Burst pipe at 2am? Pick up the phone, we already did. A licensed Cleveland plumber at your door within the hour, price agreed before the work starts.<span class="caret"></span></p>
+          <div class="mfoot"><span>voice <b>yours</b></span><span>filler <b>zero</b></span><span>sounds like <b>a person</b></span></div>
         </div>
-        <div class="meta">
-          <div class="tag">Driving School · Seattle</div>
-          <h3>Discount Driving School</h3>
-          <p>A redesign plus a custom student and admin portal. Clean booking, mobile-first, and ready for real traffic.</p>
-          <span class="open">View the site <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
-        </div>
-      </article>
-
-      <article class="proj rv">
-        <div class="shot">
-          <div class="top"><i></i><i></i><i></i><span class="u">nurhabits.com</span></div>
-          <picture>
-            <source srcset="shot-nurhabits-home.avif" type="image/avif">
-            <source srcset="shot-nurhabits-home.webp" type="image/webp">
-            <img class="scr" src="shot-nurhabits-home.webp" alt="NurHabits, a website built by odba web" loading="lazy">
-          </picture>
-        </div>
-        <div class="meta">
-          <div class="tag">Wellness · Portland</div>
-          <h3>NurHabits</h3>
-          <p>A faith-based habit tracker that guides Muslims through staged daily routines. Bold landing page built to convert visitors into sign-ups.</p>
-          <span class="open">View the site <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
-        </div>
-      </article>
-    </div>
-
-    <div class="stats rv">
-      <div class="stat"><b>48<span class="o">h</span></b><span>Fastest launch</span></div>
-      <div class="stat"><b>2<span class="o">wk</span></b><span>Longest build</span></div>
-      <div class="stat"><b>0<span class="o">calls</span></b><span>Start to finish</span></div>
-      <div class="stat"><b><span class="o">$</span>0</b><span>Hidden fees</span></div>
+      </div>
     </div>
   </div>
 </section>
-
-
-
 
 <!-- ===== OFFER ===== -->
 <section class="sec offer" id="offer">
@@ -751,10 +814,12 @@ footer{border-top:1px solid var(--line);padding:46px 0 40px}
         <div class="price"><span class="amt">$1,500</span><span class="per">one-time</span></div>
         <div class="ready">Live in about a week</div>
         <div class="rev-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg> 2 Revision Rounds</div>
-        <p class="pdesc">For the business ready to get found and turn visitors into customers. This is the one that wins you jobs.</p>
+        <p class="pdesc">For the business ready to get found. Researched, written, and built to turn visitors into calls.</p>
         <ul>
           <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Up to 5 pages, with your services broken out</li>
           <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Full market research + keyword strategy</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>All copy written for you, by Ghost</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>3 months of Ghost Pro included</li>
           <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Local SEO + schema, done right</li>
           <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Contact form, tap-to-call &amp; Google Maps</li>
           <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Analytics, SSL &amp; hosting setup</li>
@@ -770,10 +835,11 @@ footer{border-top:1px solid var(--line);padding:46px 0 40px}
         <div class="price"><span class="amt">$750</span><span class="per">one-time</span></div>
         <div class="ready">Live in 48 hours</div>
         <div class="rev-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg> 1 Revision Round</div>
-        <p class="pdesc">A clean, fast one-pager for when you just need to look the part and get the phone ringing.</p>
+        <p class="pdesc">A clean, fast one-pager built to look the part and ask for the call.</p>
         <ul>
           <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>One-page site, up to 6 sections</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Market research + the SEO basics</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Competitor snapshot + the SEO basics</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Copy written for you, by Ghost</li>
           <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Contact form &amp; tap-to-call</li>
           <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Analytics, SSL &amp; hosting setup</li>
           <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>1 round of changes, then it's yours</li>
@@ -792,90 +858,7 @@ footer{border-top:1px solid var(--line);padding:46px 0 40px}
     </div>
 
     <!-- TRUST + PAYMENT BLOCK -->
-    <div class="pay-trust rv">
-      <div class="pay-trust-head">
-        <span class="mono" style="color:var(--orange);letter-spacing:.18em;font-size:.72rem">How payment works</span>
-        <h3 class="pay-trust-title">You see the site before you pay the rest.</h3>
-        <p class="pay-trust-sub">Two payments. No surprises. Stripe handles everything — card, Apple Pay, Google Pay.</p>
-      </div>
-
-      <div class="pay-steps">
-        <div class="pay-step">
-          <div class="pay-step-num">1</div>
-          <div class="pay-step-body">
-            <div class="pay-step-label">Lock your slot</div>
-            <div class="pay-step-desc">50% deposit now. This is what reserves your week in the queue and starts the clock.</div>
-            <div class="pay-step-links">
-              <a href="https://buy.stripe.com/bJe28r38Gb4j4MD9Mdawo0h" class="pay-link">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
-                Pay Launch deposit — $375
-              </a>
-              <a href="https://buy.stripe.com/fZu4gzdNk6O37YP3nPawo0g" class="pay-link">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
-                Pay Website deposit — $750
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="pay-step-connector">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
-        </div>
-
-        <div class="pay-step">
-          <div class="pay-step-num">2</div>
-          <div class="pay-step-body">
-            <div class="pay-step-label">I build. You review.</div>
-            <div class="pay-step-desc">You get a live preview link. Request changes in writing. Nothing is final until you say so.</div>
-          </div>
-        </div>
-
-        <div class="pay-step-connector">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
-        </div>
-
-        <div class="pay-step">
-          <div class="pay-step-num">3</div>
-          <div class="pay-step-body">
-            <div class="pay-step-label">Approve, then pay the rest</div>
-            <div class="pay-step-desc">Only once you're happy with what you see. The remaining 50% is invoiced after your sign-off.</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="pay-trust-cards">
-        <div class="ptcard">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          <div>
-            <strong>Full refund if you don't love it</strong>
-            <span>Not happy after the preview? You get your deposit back. No argument, no hoops.</span>
-          </div>
-        </div>
-        <div class="ptcard">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-          <div>
-            <strong>No contract. No retainer.</strong>
-            <span>You're not locked in to anything. One flat price, done.</span>
-          </div>
-        </div>
-        <div class="ptcard">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
-          <div>
-            <strong>Stripe-secured checkout</strong>
-            <span>Card, Apple Pay, Google Pay. Your details never touch my server.</span>
-          </div>
-        </div>
-        <div class="ptcard">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-          <div>
-            <strong>Timeline starts on receipt</strong>
-            <span>The clock doesn't start until your brief and content are in — so you're never rushed.</span>
-          </div>
-        </div>
-      </div>
-
-      <p class="pay-footnote">Domain registration not included. Extra revision rounds are $50 each.</p>
-    </div>
+    <p class="rv" style="margin-top:22px;text-align:center;font-size:.85rem;color:var(--fg-faint);max-width:560px;margin-left:auto;margin-right:auto;line-height:1.7">50% locks your slot. You see the live preview before the rest is due. Not right? Deposit back. Stripe checkout: card, Apple Pay, Google Pay.<br>Domain registration not included. Extra revision rounds are $150 each.</p>
   </div>
 </section>
 
@@ -886,7 +869,7 @@ footer{border-top:1px solid var(--line);padding:46px 0 40px}
     <div class="bhead rv">
       <span class="kicker mono" style="justify-content:center"><span class="ln"></span>Start your build</span>
       <h2 class="h2">The whole brief. <span class="o">Right here.</span></h2>
-      <p class="lead">This is the only step. A few questions, three sites you like the look of, and you're done. I take it from there. No call to book, no thread to start.</p>
+      <p class="lead">This is the only step. A few questions and you're done. I take it from there. No call to book, no thread to start.</p>
     </div>
 
     <div class="briefcard rv">
@@ -896,15 +879,13 @@ footer{border-top:1px solid var(--line);padding:46px 0 40px}
         <div class="pline"></div>
         <div class="pstep" data-s="1"><span class="dot">2</span><span>Goals</span></div>
         <div class="pline"></div>
-        <div class="pstep" data-s="2"><span class="dot">3</span><span>Vibe</span></div>
-        <div class="pline"></div>
-        <div class="pstep" data-s="3"><span class="dot">4</span><span>Review</span></div>
+        <div class="pstep" data-s="2"><span class="dot">3</span><span>Review</span></div>
       </div>
 
       <div class="bbody">
         <!-- STEP 1 — BUSINESS -->
         <div class="bpanel on" data-panel="0">
-          <div class="qnum">01 / 04 · Your business</div>
+          <div class="qnum">01 / 03 · Your business</div>
           <h3>Tell me who you are.</h3>
           <p class="qsub">Just the basics, enough to ground the research. Two minutes, not twenty.</p>
           <div class="two">
@@ -923,15 +904,19 @@ footer{border-top:1px solid var(--line);padding:46px 0 40px}
               <input class="inp" id="f_where" type="text" placeholder="e.g. Philadelphia, PA">
             </div>
             <div class="fld">
-              <label>Current site, if any</label>
-              <input class="inp" id="f_url" type="text" placeholder="yoursite.com (or leave blank)">
+              <label>Your email <span class="req">*</span></label>
+              <input class="inp" id="f_email" type="email" placeholder="you@yourbusiness.com">
             </div>
+          </div>
+          <div class="fld">
+            <label>Current site, if any</label>
+            <input class="inp" id="f_url" type="text" placeholder="yoursite.com (or leave blank)">
           </div>
         </div>
 
         <!-- STEP 2 — GOALS -->
         <div class="bpanel" data-panel="1">
-          <div class="qnum">02 / 04 · The goal</div>
+          <div class="qnum">02 / 03 · The goal</div>
           <h3>What should this site <em>do</em>?</h3>
           <p class="qsub">Pick the build that fits, then tell me the one outcome that would make this a win.</p>
           <div class="fld">
@@ -953,45 +938,18 @@ footer{border-top:1px solid var(--line);padding:46px 0 40px}
             </div>
           </div>
           <div class="fld">
+            <label>A site whose look you like <span style="color:var(--fg-faint)">(optional)</span></label>
+            <input class="inp" id="f_ref" type="text" placeholder="Paste any URL. It doesn't have to be your industry.">
+          </div>
+          <div class="fld">
             <label>Anything I should know? <span style="color:var(--fg-faint)">(optional)</span></label>
             <textarea class="ta" id="f_notes" placeholder="Competitors that bug you, pages you need, a deadline, brand colors. Whatever's on your mind."></textarea>
           </div>
         </div>
 
-        <!-- STEP 3 — VIBE (the centerpiece) -->
-        <div class="bpanel" data-panel="2">
-          <div class="qnum">03 / 04 · The vibe</div>
-          <h3>Drop three sites you love.</h3>
-          <p class="qsub">This is how I lock your direction without a single back-and-forth. They don't have to be in your industry. Just point at what feels right.</p>
-          <div class="vibe-help">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
-            <span>Paste any URL. A one-line note on <i>why</i> you like it is optional but it sharpens the result.</span>
-          </div>
-          <div class="slots" id="slots">
-            <div class="slot" data-slot="0">
-              <span class="snum">01</span>
-              <div class="slabel">Reference</div>
-              <input type="text" class="site-in" placeholder="stripe.com" autocomplete="off">
-              <textarea class="why-in" rows="1" placeholder="Why this one?"></textarea>
-            </div>
-            <div class="slot" data-slot="1">
-              <span class="snum">02</span>
-              <div class="slabel">Reference</div>
-              <input type="text" class="site-in" placeholder="linear.app" autocomplete="off">
-              <textarea class="why-in" rows="1" placeholder="Why this one?"></textarea>
-            </div>
-            <div class="slot" data-slot="2">
-              <span class="snum">03</span>
-              <div class="slabel">Reference</div>
-              <input type="text" class="site-in" placeholder="a competitor you like" autocomplete="off">
-              <textarea class="why-in" rows="1" placeholder="Why this one?"></textarea>
-            </div>
-          </div>
-        </div>
-
         <!-- STEP 4 — REVIEW -->
-        <div class="bpanel" data-panel="3">
-          <div class="qnum">04 / 04 · Review</div>
+        <div class="bpanel" data-panel="2">
+          <div class="qnum">03 / 03 · Review</div>
           <h3>Here's what I'll work from.</h3>
           <p class="qsub">Everything in writing, on the record, exactly how the whole process runs. Look it over and send it.</p>
           <div class="review-grid" id="review"></div>
@@ -1001,12 +959,13 @@ footer{border-top:1px solid var(--line);padding:46px 0 40px}
         </div>
 
         <!-- DONE -->
-        <div class="bpanel" data-panel="4">
+        <div class="bpanel" data-panel="3">
           <div class="done">
             <div class="dcheck"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
             <h3>Brief received.</h3>
             <p>That's genuinely the whole onboarding. I'll send a written confirmation with your timeline shortly, and start the research today.</p>
-            <span class="dmeta"><span class="dl"></span>You'll receive a payment link to secure your slot.</span>
+            <div id="doneCta" style="margin-top:1.5rem"></div>
+            <span class="dmeta" id="doneMeta"><span class="dl"></span>You'll receive a payment link to secure your slot.</span>
           </div>
         </div>
       </div>
@@ -1018,37 +977,7 @@ footer{border-top:1px solid var(--line);padding:46px 0 40px}
         <button class="next" id="bNext">Continue <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
       </div>
     </div>
-    <p class="bnote rv" style="margin-top:22px">Prefer email? <a href="mailto:contact@odbaweb.com" style="color:var(--orange);font-weight:600">contact@odbaweb.com</a>. Same async process, same flat price.</p>
-  </div>
-</section>
-
-<!-- ===== CONTENT (restored) ===== -->
-<section class="sec content">
-  <div class="wrap">
-    <div class="grid">
-      <div class="rv">
-        <span class="kicker mono"><span class="ln"></span>Paid product · Content engine</span>
-        <h2 class="h2">Meet <span class="o">Ghost.</span></h2>
-        <p class="lead">A writing tool built on extensive research into the human writing patterns, structures, and nuances that AI consistently violates. Tuned to your voice, it delivers frictionless, authentic copy.</p>
-        <p class="lead" style="margin-top:.9rem">Ghost is locked. Pick a plan to get in.</p>
-        <a class="btn btn-fill" href="ghost-unlock.html" style="margin-top:1.6rem">Unlock Ghost <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <p class="addfine">Got an old blog to refresh? One-time project. <a href="mailto:contact@odbaweb.com" style="color:var(--orange);font-weight:600">Get a quote.</a></p>
-      </div>
-      <div class="rows rv">
-        <div class="ac">
-          <div><div class="nm">Basic</div><div class="ds">Up to 20 drafts a month. One voice profile.</div></div>
-          <div class="pr">$49<small>/mo</small></div>
-        </div>
-        <div class="ac">
-          <div><div class="nm">Pro</div><div class="ds">Unlimited drafts. Three voice profiles. Keyword targeting.</div></div>
-          <div class="pr">$99<small>/mo</small></div>
-        </div>
-        <div class="ac">
-          <div><div class="nm">Lifetime</div><div class="ds">Everything in Pro. Pay once. Keep it forever.</div></div>
-          <div class="pr">$499<small> once</small></div>
-        </div>
-      </div>
-    </div>
+    <p class="bnote rv" style="margin-top:18px">Prefer email? <a href="mailto:contact@odbaweb.com" style="color:var(--orange);font-weight:600">contact@odbaweb.com</a>. Same async process, same flat price.</p>
   </div>
 </section>
 
@@ -1059,45 +988,21 @@ footer{border-top:1px solid var(--line);padding:46px 0 40px}
       <div class="left rv">
         <span class="kicker mono"><span class="ln"></span>After launch · Optional</span>
         <h2 class="h2">Set it, then <span class="o">grow it.</span></h2>
-        <div class="price"><span class="amt">$99</span><span class="per">/ month</span></div>
+        <div class="price"><span class="amt">$149</span><span class="per">/ month</span></div>
         <p class="cancel"><b>Cancel anytime. Pause anytime.</b> Most clients keep it. Nobody's locked in.</p>
-        <a class="btn btn-fill" href="#start">Add Care &amp; Growth <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <p style="margin-top:1rem;font-size:.8rem;color:var(--fg-faint)">Or add it at checkout. <a href="https://buy.stripe.com/eVq00jbFc4FV4MD7E5awo0i" style="color:var(--orange);font-weight:600">Subscribe now, $99/mo</a></p>
-        <p class="note"><b>One line instead of five bills.</b> Hosting, edits, and ongoing SEO rolled into a single flat rate. No separate platform fee, no per-change invoices.</p>
+        <!-- TODO: this is the old $99/mo Payment Link. Generate the new $149/mo link in Stripe and swap it. -->
+        <a class="btn btn-fill" href="https://buy.stripe.com/eVq00jbFc4FV4MD7E5awo0i">Add Care &amp; Growth · $149/mo <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <p class="note"><b>One line instead of five bills.</b> Hosting, edits, ongoing SEO, and Ghost Pro rolled into a single flat rate. No separate platform fee, no per-change invoices.</p>
       </div>
-      <div class="feats rv">
-        <div class="cfeat">
-          <div class="ci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M2 9h20M6 14h4"/></svg></div>
-          <h4>Hosting &amp; SSL handled</h4>
-          <p>Fast managed hosting, SSL, and automatic backups. Your site stays online, secure, and quick.</p>
-        </div>
-        <div class="cfeat">
-          <div class="ci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></div>
-          <h4>Unlimited small edits</h4>
-          <p>New hours, a price change, a fresh photo. Send it over, it's done. No change-order invoices.</p>
-        </div>
-        <div class="cfeat">
-          <div class="ci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 14 4-4 3 3 5-6"/></svg></div>
-          <h4>Ongoing SEO &amp; content</h4>
-          <p>Monthly content in your voice and steady on-page tuning, so your ranking climbs instead of stalling.</p>
-        </div>
-        <div class="cfeat">
-          <div class="ci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg></div>
-          <h4>First in line for new work</h4>
-          <p>Need a new section or page? Care clients jump the queue and get a better rate on anything bigger.</p>
-        </div>
+      <div class="rv" style="display:flex;flex-direction:column;justify-content:center">
+        <div class="ac"><div><div class="nm">Hosting &amp; SSL handled</div><div class="ds">Fast managed hosting, backups, always online.</div></div></div>
+        <div class="ac"><div><div class="nm">Unlimited small edits</div><div class="ds">New hours, a price change, a fresh photo. Send it, it’s done.</div></div></div>
+        <div class="ac"><div><div class="nm">Ongoing SEO &amp; content</div><div class="ds">Fresh content in your voice every month, built to climb instead of stall.</div></div></div>
+        <div class="ac"><div><div class="nm">Ghost Pro included</div><div class="ds">Unlimited drafts in your voice for as long as you're on the plan.</div></div></div>
+        <div class="ac"><div><div class="nm">Your monthly numbers</div><div class="ds">Calls clicked, forms sent, where you rank. One email a month, no dashboard to learn.</div></div></div>
+        <div class="ac"><div><div class="nm">First in line for new work</div><div class="ds">Care clients jump the queue and get a better rate on bigger jobs.</div></div></div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ===== GUARANTEE ===== -->
-<section class="sec guar">
-  <div class="gglow"></div>
-  <div class="wrap">
-    <div class="shield rv"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg></div>
-    <h2 class="rv">Don't love your preview? <span class="o">Full refund.</span></h2>
-    <p class="rv">You see the finished site before you pay the balance. If it's not right and we can't fix it, you walk away. <strong>Deposit back. No invoice, no argument.</strong></p>
   </div>
 </section>
 
@@ -1116,12 +1021,16 @@ footer{border-top:1px solid var(--line);padding:46px 0 40px}
           <div class="ans"><p>Nope, and that's the whole idea. You fill out a brief, I research and build, and you review everything in writing. It keeps the work fast and on the record. If you ever want to talk something through you can, but nothing about the process requires a meeting.</p></div>
         </div>
         <div class="qa">
+          <button>Why not just use an AI website builder? <span class="pm">+</span></button>
+          <div class="ans"><p>You can, and it'll be live in 30 seconds. The catch is what it's built from: generic copy loses twice, it doesn't convince the humans reading it, and it doesn't get cited when AI answers their searches. Every build here runs on market research, copy written to convert, and the schema AI search reads. Fast to launch is easy. Built to get the call is the work.</p></div>
+        </div>
+        <div class="qa">
           <button>What if I don't like the design? <span class="pm">+</span></button>
-          <div class="ans"><p>Every build comes with rounds of changes, and we keep refining until it's right. Want more passes? They're a flat $50 each. And if it's just not working out before launch, you get a full refund. You're never stuck with something you don't love.</p></div>
+          <div class="ans"><p>Every build comes with rounds of changes, and we keep refining until it's right. Want more passes? They're a flat $150 each. And if it's just not working out before launch, you get a full refund. You're never stuck with something you don't love.</p></div>
         </div>
         <div class="qa">
           <button>Do I own the site when it's finished? <span class="pm">+</span></button>
-          <div class="ans"><p>Yes, completely. No lock-in. The finished site is yours to host anywhere you like. Care &amp; Growth ($99/mo) is a separate, optional plan if you'd rather I handle the hosting, edits, and SEO for you. Cancel whenever.</p></div>
+          <div class="ans"><p>Yes, completely. No lock-in. The finished site is yours to host anywhere you like. Care &amp; Growth ($149/mo) is a separate, optional plan if you'd rather I handle the hosting, edits, and SEO for you. Cancel whenever.</p></div>
         </div>
         <div class="qa">
           <button>How fast will I actually get my site? <span class="pm">+</span></button>
@@ -1130,6 +1039,14 @@ footer{border-top:1px solid var(--line);padding:46px 0 40px}
         <div class="qa">
           <button>Is SEO really included, or is it an upsell? <span class="pm">+</span></button>
           <div class="ans"><p>Included in every build, full stop. Market research, keyword strategy, and on-page work are baked in from the start. I don't charge extra for the thing that actually helps people find you.</p></div>
+        </div>
+        <div class="qa">
+          <button>Will this guarantee me customers? <span class="pm">+</span></button>
+          <div class="ans"><p>No. No website can promise calls, and anyone guaranteeing leads is selling you something. I control my half: speed, clarity, tap-to-call, copy that asks for the job. You control yours: reputation, pricing, your market. I build my half properly and show you the numbers every month.</p></div>
+        </div>
+        <div class="qa">
+          <button>Who writes the words? <span class="pm">+</span></button>
+          <div class="ans"><p>I do, with Ghost, my own writing tool built on research into the human writing patterns AI gets wrong. Every line is researched, written in your voice, and reviewed by you before launch. Nothing goes live without your sign-off.</p></div>
         </div>
         <div class="qa">
           <button>What don't you take on? <span class="pm">+</span></button>
@@ -1143,7 +1060,32 @@ footer{border-top:1px solid var(--line);padding:46px 0 40px}
 <!-- ===== BOOK (footer zone) ===== -->
 <section class="sec book" id="book">
   <div class="wrap">
-    <div>
+
+    <div class="bgrid">
+      <div class="bleft rv">
+        <h2>One brief. One flat price. <span class="o">Live in a week.</span></h2>
+        <p>No call, no quote, no agency timeline. Send the two-minute brief and the research starts today.</p>
+        <div class="guarline">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span><b>Full refund if the preview isn't right.</b> You risk a brief, not a build.</span>
+        </div>
+        <div class="bacts">
+          <a class="btn btn-fill" href="#start">Start your build <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn-dark" href="mailto:contact@odbaweb.com">Email instead</a>
+        </div>
+        <span class="bslots"><span class="dl"></span>A few builds a month, so every site gets the research</span>
+      </div>
+      <div class="rv">
+        <div class="tline">
+          <div class="th"><span class="tt">Week one · <b>The Website</b></span><span class="tt">$1,500 flat</span></div>
+          <div class="trow"><span class="td">Day 1</span><div><div class="tn">Brief in, research starts</div><div class="ts">Your market, your competitors, the keywords that matter.</div></div></div>
+          <div class="trow"><span class="td">Day 2–4</span><div><div class="tn">Design and copy, by Ghost</div><div class="ts">Built mobile-first, written in your voice, SEO baked in.</div></div></div>
+          <div class="trow"><span class="td">Day 5</span><div><div class="tn">Preview link in your inbox</div><div class="ts">The real site on a real URL. Notes in writing.</div></div></div>
+          <div class="trow"><span class="td">Day 7</span><div><div class="tn">Approve, then live</div><div class="ts">Hosting, SSL, and analytics set up. Yours to keep.</div></div></div>
+          <div class="tfoot">In a hurry? <b>Launch is live in 48 hours.</b></div>
+        </div>
+      </div>
+    </div>
 
     <!-- footer folded into the dark zone, like Designjoy -->
     <footer>
@@ -1153,8 +1095,9 @@ footer{border-top:1px solid var(--line);padding:46px 0 40px}
           <div class="cr">© 2026 odba web. Built to convert.</div>
         </div>
         <nav class="foot-mid">
-          <a href="#how">How it works</a>
           <a href="#work">Work</a>
+          <a href="#how">How it works</a>
+          <a href="ghost-unlock.html">Ghost</a>
           <a href="#offer">Pricing</a>
           <a href="#faq">FAQ</a>
         </nav>
@@ -1164,11 +1107,16 @@ footer{border-top:1px solid var(--line);padding:46px 0 40px}
   </div>
 </section>
 
+<div class="mcta"><a class="btn btn-fill" href="#start">Start your build · 2-min brief</a></div>
+
 <script>
 const hd=document.getElementById('hd');
 addEventListener('scroll',()=>hd.classList.toggle('stuck',scrollY>16),{passive:true});
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+/* hide the sticky CTA while the brief itself is on screen */
+const startSec=document.getElementById('start');
+if(startSec){new IntersectionObserver(es=>es.forEach(e=>document.body.classList.toggle('brief-inview',e.isIntersecting)),{threshold:.05}).observe(startSec);}
 document.querySelectorAll('.qa button').forEach(b=>b.addEventListener('click',()=>{
   const qa=b.parentElement;const open=qa.classList.contains('open');
   document.querySelectorAll('.qa').forEach(x=>x.classList.remove('open'));
@@ -1177,7 +1125,7 @@ document.querySelectorAll('.qa button').forEach(b=>b.addEventListener('click',()
 
 /* ===== BRIEF controller ===== */
 (function(){
-  const TOTAL=4; // panels 0..3 are steps, 4 is the done screen
+  const TOTAL=3; // panels 0..2 are steps, 3 is the done screen
   let step=0;
   const panels=[...document.querySelectorAll('.bpanel')];
   const psteps=[...document.querySelectorAll('#bprog .pstep')];
@@ -1208,12 +1156,6 @@ document.querySelectorAll('.qa button').forEach(b=>b.addEventListener('click',()
     });
   });
 
-  // fill-state on the three vibe slots
-  document.querySelectorAll('#slots .slot').forEach(slot=>{
-    const url=slot.querySelector('.site-in');
-    url.addEventListener('input',()=>slot.classList.toggle('filled',url.value.trim().length>0));
-  });
-
   function show(n){
     panels.forEach((p,i)=>p.classList.toggle('on',i===n));
     psteps.forEach((p,i)=>{
@@ -1237,9 +1179,11 @@ document.querySelectorAll('.qa button').forEach(b=>b.addEventListener('click',()
     // clear prior highlights
     document.querySelectorAll('.inp').forEach(i=>i.style.borderColor='');
     if(n===0){
-      const reqs=['f_name','f_what','f_where'];
+      const reqs=['f_name','f_what','f_where','f_email'];
       let ok=true,first=null;
       reqs.forEach(id=>{if(!val(id)){ok=false;const el=document.getElementById(id);el.style.borderColor='var(--orange)';if(!first)first=el;}});
+      const em=document.getElementById('f_email');
+      if(val('f_email') && !/^\S+@\S+\.\S+$/.test(val('f_email'))){ok=false;em.style.borderColor='var(--orange)';if(!first)first=em;}
       if(first)first.focus();
       return ok;
     }
@@ -1248,33 +1192,21 @@ document.querySelectorAll('.qa button').forEach(b=>b.addEventListener('click',()
       if(!sel('goalChips')){flash('#goalChips');return false;}
       return true;
     }
-    if(n===2){
-      const filled=[...document.querySelectorAll('#slots .site-in')].filter(i=>i.value.trim()).length;
-      if(filled<3){
-        document.querySelectorAll('#slots .slot').forEach(s=>{if(!s.querySelector('.site-in').value.trim())s.style.borderColor='var(--orange)';});
-        return false;
-      }
-      return true;
-    }
     return true;
   }
   function flash(sel){const el=document.querySelector(sel);if(!el)return;el.animate([{opacity:.4},{opacity:1}],{duration:300});}
 
   function buildReview(){
-    const sites=[...document.querySelectorAll('#slots .slot')].map((s,i)=>{
-      const u=s.querySelector('.site-in').value.trim();
-      const w=s.querySelector('.why-in').value.trim();
-      return u?(u+(w?', '+w:'')):'';
-    }).filter(Boolean).join('\n');
     const rows=[
       ['Business', val('f_name') || em()],
       ['What', val('f_what') || em()],
       ['Where', val('f_where') || em()],
+      ['Email', val('f_email') || em()],
       ['Build', sel('tierChips') || em()],
       ['Main goal', sel('goalChips') || em()],
-      ['Vibe refs', sites || em()],
     ];
-    if(val('f_url')) rows.splice(3,0,['Current site', val('f_url')]);
+    if(val('f_url')) rows.splice(4,0,['Current site', val('f_url')]);
+    if(val('f_ref')) rows.push(['Reference', val('f_ref')]);
     if(val('f_notes')) rows.push(['Notes', val('f_notes')]);
     document.getElementById('review').innerHTML = rows.map(r=>
       '<div class="rrow"><div class="rk">'+r[0]+'</div><div class="rv-val">'+r[1]+'</div></div>'
@@ -1295,15 +1227,12 @@ document.querySelectorAll('.qa button').forEach(b=>b.addEventListener('click',()
         name: val('f_name'),
         what: val('f_what'),
         where: val('f_where'),
+        email: val('f_email'),
+        _replyto: val('f_email'),
         url: val('f_url'),
         tier: sel('tierChips'),
         goal: sel('goalChips'),
-        vibe1_url: document.querySelectorAll('#slots .site-in')[0]?.value?.trim() || '',
-        vibe1_why: document.querySelectorAll('#slots .why-in')[0]?.value?.trim() || '',
-        vibe2_url: document.querySelectorAll('#slots .site-in')[1]?.value?.trim() || '',
-        vibe2_why: document.querySelectorAll('#slots .why-in')[1]?.value?.trim() || '',
-        vibe3_url: document.querySelectorAll('#slots .site-in')[2]?.value?.trim() || '',
-        vibe3_why: document.querySelectorAll('#slots .why-in')[2]?.value?.trim() || '',
+        reference: val('f_ref'),
         notes: val('f_notes'),
         submitted: new Date().toISOString()
       };
@@ -1316,6 +1245,14 @@ document.querySelectorAll('.qa button').forEach(b=>b.addEventListener('click',()
         });
         if (!res.ok) throw new Error('Submission failed');
         show(TOTAL); // done — only on success
+        const DEPOSITS={'Launch':['https://buy.stripe.com/bJe28r38Gb4j4MD9Mdawo0h','Lock your slot now \u00b7 $375 deposit'],'The Website':['https://buy.stripe.com/fZu4gzdNk6O37YP3nPawo0g','Lock your slot now \u00b7 $750 deposit']};
+        const t=sel('tierChips'), cta=document.getElementById('doneCta'), meta=document.getElementById('doneMeta');
+        if(DEPOSITS[t]){
+          cta.innerHTML='<a class="btn btn-fill" href="'+DEPOSITS[t][0]+'">'+DEPOSITS[t][1]+' <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>';
+          if(meta)meta.innerHTML='<span class="dl"></span>Deposit reserves your week in the queue. Refunded if the preview isn\u2019t right.';
+        } else {
+          if(meta)meta.innerHTML='<span class="dl"></span>I\u2019ll email you today to confirm scope and timeline.';
+        }
         card.scrollIntoView({behavior:'smooth',block:'center'});
       } catch(e) {
         console.error('Brief submission error:', e);
@@ -1335,137 +1272,6 @@ document.querySelectorAll('.qa button').forEach(b=>b.addEventListener('click',()
   card.addEventListener('keydown',e=>{
     if(e.key==='Enter' && e.target.classList.contains('inp')){e.preventDefault();next.click();}
   });
-})();
-
-/* ============================================================
-   BOOK-TO-BUILD CALENDAR
-   Capacity per period:
-     $750     -> 1 slot per WEEK   (tier key: launch)
-     $1,500   -> 1 slot per WEEK   (tier key: website)
-     $2,500+  -> 1 slot per MONTH  (tier key: custom)
-   ------------------------------------------------------------
-   To mark something as booked, add an entry to BOOKED below.
-   Weekly tiers use the ISO-week key "YYYY-Www".
-   Monthly tier uses the month key "YYYY-MM".
-   Examples:
-     BOOKED.launch.push('2026-W24');   // $750 taken that week
-     BOOKED.website.push('2026-W25');  // $1,500 taken that week
-     BOOKED.custom.push('2026-06');    // $2,500+ taken that month
-   Leave the arrays empty for "all open".
-   ============================================================ */
-(function(){
-  const cal = document.getElementById('cal');
-  if(!cal) return;
-
-  // ---- CONFIG ----
-  const START = new Date(); START.setHours(0,0,0,0); // bookable from today forward
-  const TIERS = [
-    {key:'launch',  name:'Launch',     price:'$750',    chip:'Launch',       per:'week',  meta:'1 / week'},
-    {key:'website', name:'The Website',price:'$1,500',  chip:'The Website',  per:'week',  meta:'1 / week'},
-    {key:'custom',  name:'Custom',     price:'$2,500+', chip:'Custom build', per:'month', meta:'1 / month'},
-  ];
-  const BOOKED = { launch:[], website:[], custom:[] }; // <- edit these to close slots
-
-  // ---- date helpers ----
-  function isoWeek(d){
-    const t=new Date(Date.UTC(d.getFullYear(),d.getMonth(),d.getDate()));
-    const day=t.getUTCDay()||7; t.setUTCDate(t.getUTCDate()+4-day);
-    const ys=new Date(Date.UTC(t.getUTCFullYear(),0,1));
-    const wk=Math.ceil((((t-ys)/86400000)+1)/7);
-    return t.getUTCFullYear()+'-W'+String(wk).padStart(2,'0');
-  }
-  const monthKey = d => d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0');
-  function tierOpenOn(tier,d){
-    if(tier.per==='week')  return !BOOKED[tier.key].includes(isoWeek(d));
-    return !BOOKED[tier.key].includes(monthKey(d));
-  }
-  const anyTierOpenOn = d => TIERS.some(t=>tierOpenOn(t,d));
-
-  const MN=['January','February','March','April','May','June','July','August','September','October','November','December'];
-  let view = new Date(START.getFullYear(), START.getMonth(), 1);
-  let selected = null;
-
-  const grid=document.getElementById('calGrid'),
-        title=document.getElementById('calTitle'),
-        prevB=document.getElementById('calPrev'),
-        nextB=document.getElementById('calNext'),
-        slotDate=document.getElementById('slotDate'),
-        slotCap=document.getElementById('slotCap'),
-        slotBody=document.getElementById('slotBody');
-
-  // limit forward browsing to 3 months out
-  const MAXVIEW=new Date(START.getFullYear(),START.getMonth()+3,1);
-
-  function monthHasAnyOpen(y,m){
-    const last=new Date(y,m+1,0).getDate();
-    for(let dd=1;dd<=last;dd++){
-      const d=new Date(y,m,dd);
-      if(d>=START && anyTierOpenOn(d)) return true;
-    }
-    return false;
-  }
-
-  function render(){
-    const y=view.getFullYear(), m=view.getMonth();
-    title.innerHTML = MN[m]+' <span>'+y+'</span>';
-    prevB.disabled = (y===START.getFullYear() && m===START.getMonth());
-    nextB.disabled = (view.getFullYear()>MAXVIEW.getFullYear() || (view.getFullYear()===MAXVIEW.getFullYear() && view.getMonth()>=MAXVIEW.getMonth()));
-    grid.innerHTML='';
-    const firstDow=new Date(y,m,1).getDay();
-    const days=new Date(y,m+1,0).getDate();
-    for(let i=0;i<firstDow;i++){const c=document.createElement('div');c.className='day pad';grid.appendChild(c);}
-    for(let dd=1;dd<=days;dd++){
-      const d=new Date(y,m,dd);
-      const c=document.createElement('div'); c.textContent=dd;
-      const isToday = d.getTime()===START.getTime();
-      if(d<START){ c.className='day past'; }
-      else if(!anyTierOpenOn(d)){ c.className='day full'; }
-      else {
-        c.className='day avail'+(isToday?' today':'');
-        if(selected && d.getTime()===selected.getTime()) c.className='day sel';
-        const mk=document.createElement('span'); mk.className='dotmk'; c.appendChild(mk);
-        c.addEventListener('click',()=>{selected=d;render();showTiers(d);});
-      }
-      grid.appendChild(c);
-    }
-    if(!monthHasAnyOpen(y,m) && !(y===START.getFullYear()&&m===START.getMonth())){
-      // visually it's all struck-through already; nothing extra needed
-    }
-  }
-
-  function showTiers(d){
-    const wk=isoWeek(d), mo=monthKey(d);
-    slotDate.innerHTML = d.toLocaleDateString('en-US',{weekday:'long',month:'short',day:'numeric'});
-    slotCap.textContent = 'Week '+wk.split('-W')[1];
-    const openCount = TIERS.filter(t=>tierOpenOn(t,d)).length;
-    if(openCount===0){
-      slotBody.innerHTML='<div class="monthfull">That week is fully booked. Try another open day.</div>';
-      return;
-    }
-    const wrap=document.createElement('div'); wrap.className='tiers';
-    TIERS.forEach(t=>{
-      const open=tierOpenOn(t,d);
-      const b=document.createElement('button');
-      b.className='tier'+(open?'':' gone'); b.disabled=!open;
-      b.innerHTML='<span class="tname">'+t.name+' <span class="tprice">'+t.price+'</span></span>'+
-        '<span class="tmeta">'+(open?t.meta:'taken this '+t.per)+'</span>'+
-        (open?'<span class="tgo"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>':'');
-      if(open){
-        b.addEventListener('click',()=>{
-          // preselect the matching chip in the brief, then scroll to it
-          const chip=[...document.querySelectorAll('#tierChips .chip')].find(c=>c.getAttribute('data-tier')===t.chip);
-          if(chip){document.querySelectorAll('#tierChips .chip').forEach(x=>x.classList.remove('sel'));chip.classList.add('sel');}
-          document.getElementById('start').scrollIntoView({behavior:'smooth',block:'start'});
-        });
-      }
-      wrap.appendChild(b);
-    });
-    slotBody.innerHTML=''; slotBody.appendChild(wrap);
-  }
-
-  prevB.addEventListener('click',()=>{if(prevB.disabled)return;view=new Date(view.getFullYear(),view.getMonth()-1,1);render();});
-  nextB.addEventListener('click',()=>{if(nextB.disabled)return;view=new Date(view.getFullYear(),view.getMonth()+1,1);render();});
-  render();
 })();
 
 </script>
