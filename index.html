@@ -258,6 +258,22 @@ header.stuck{background:rgba(250,250,250,.82);backdrop-filter:blur(18px);-webkit
 .plan ul{list-style:none;display:flex;flex-direction:column;gap:.8rem;margin-bottom:1.9rem}
 .plan li{display:flex;align-items:flex-start;gap:.7rem;font-size:.95rem;color:#3a3a42}
 .plan li svg{flex-shrink:0;margin-top:2px;color:var(--orange)}
+.plan li .vt{margin-left:auto;padding-left:12px;font-family:var(--mono);font-size:.6rem;letter-spacing:.05em;color:var(--fg-faint);white-space:nowrap;align-self:center}
+.stackline{margin:-0.6rem 0 1.6rem;padding:.85rem 1.1rem;border:1px dashed rgba(255,90,0,.35);background:rgba(255,90,0,.05);border-radius:var(--r-sm);font-size:.88rem;color:var(--fg-dim);line-height:1.5;text-align:center}
+.stackline b{color:var(--fg);font-weight:600}
+
+/* ===== THE OTHER WAYS (comparison) ===== */
+.vs{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--card);margin:46px 0 8px;box-shadow:var(--raise-sh)}
+.vs .col{padding:28px 26px;border-right:1px solid var(--line-2)}
+.vs .col:last-child{border-right:none}
+.vs .col.me{background:linear-gradient(180deg,#fff7f2,var(--card))}
+.vs .vh{font-family:var(--display);font-size:1.06rem;font-weight:700;letter-spacing:-.02em;margin-bottom:1.1rem;display:flex;align-items:center;gap:.5rem}
+.vs .col.me .vh{color:var(--orange)}
+.vs .vrow{padding:.6rem 0;border-top:1px solid var(--line-2);font-size:.88rem;line-height:1.45}
+.vs .vrow .vk{display:block;font-family:var(--mono);font-size:.56rem;letter-spacing:.12em;text-transform:uppercase;color:var(--fg-faint);margin-bottom:.2rem}
+.vs .vrow .vv{color:var(--fg-dim)}
+.vs .col.me .vrow .vv{color:var(--fg);font-weight:500}
+@media(max-width:860px){.vs{grid-template-columns:1fr}.vs .col{border-right:none;border-bottom:1px solid var(--line-2)}.vs .col:last-child{border-bottom:none}}
 .plan .btn{margin-top:auto;width:100%;justify-content:center}
 .plan.alt .btn{background:var(--card);color:var(--fg);border:1px solid var(--line);box-shadow:var(--raise-sh)}
 .plan.alt .btn:hover{border-color:#d4d4d4;transform:translateY(-2px)}
@@ -627,7 +643,7 @@ footer{border-top:1px solid var(--line);padding:46px 0 40px}
 <!-- ===== HERO ===== -->
 <section class="hero" id="top">
   <div class="glow"></div>
-  <span class="pill"><span class="blink"></span><span class="t">One person. Flat price. Full refund if it's not right.</span></span>
+  <span class="pill"><span class="blink"></span><span class="t" id="slotPill">One person. Flat price. Full refund if it's not right.</span></span>
   <h1>A website built to <span class="hl mark">get the call.</span></h1>
   <p class="lede">I research your market, write your copy with Ghost, and build a site made to get the call. Flat price. Preview before you pay. No meetings, ever.</p>
   <div class="actions">
@@ -806,6 +822,30 @@ footer{border-top:1px solid var(--line);padding:46px 0 40px}
       <span class="flat"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> <b>The price you see is the price you pay.</b> Research, SEO &amp; hosting setup come standard.</span>
     </div>
 
+    <div class="vs rv">
+      <div class="col">
+        <div class="vh">AI builder</div>
+        <div class="vrow"><span class="vk">Cost</span><span class="vv">$0 to start, forever-fees after</span></div>
+        <div class="vrow"><span class="vk">Wait</span><span class="vv">30 seconds</span></div>
+        <div class="vrow"><span class="vk">Your work</span><span class="vv">All of it. Copy, SEO, upkeep.</span></div>
+        <div class="vrow"><span class="vk">Built around</span><span class="vv">Templates</span></div>
+      </div>
+      <div class="col">
+        <div class="vh">Agency</div>
+        <div class="vrow"><span class="vk">Cost</span><span class="vv">$15K and up, quoted later</span></div>
+        <div class="vrow"><span class="vk">Wait</span><span class="vv">3 to 6 months</span></div>
+        <div class="vrow"><span class="vk">Your work</span><span class="vv">Meetings. So many meetings.</span></div>
+        <div class="vrow"><span class="vk">Built around</span><span class="vv">Their process</span></div>
+      </div>
+      <div class="col me">
+        <div class="vh">odba web</div>
+        <div class="vrow"><span class="vk">Cost</span><span class="vv">$750 to $2,500, flat, shown here</span></div>
+        <div class="vrow"><span class="vk">Wait</span><span class="vv">Days, not months</span></div>
+        <div class="vrow"><span class="vk">Your work</span><span class="vv">A two-minute brief</span></div>
+        <div class="vrow"><span class="vk">Built around</span><span class="vv">The call</span></div>
+      </div>
+    </div>
+
     <div class="plans rv">
       <!-- FLAGSHIP -->
       <div class="plan hero-plan">
@@ -817,14 +857,15 @@ footer{border-top:1px solid var(--line);padding:46px 0 40px}
         <p class="pdesc">For the business ready to get found. Researched, written, and built to turn visitors into calls.</p>
         <ul>
           <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Up to 5 pages, with your services broken out</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Full market research + keyword strategy</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>All copy written for you, by Ghost</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>3 months of Ghost Pro included</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Local SEO + schema, done right</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Full market research + keyword strategy<span class="vt">$400 alone</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>All copy written for you, by Ghost<span class="vt">$500 alone</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>3 months of Ghost Pro included<span class="vt">$297 list</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Local SEO + schema, done right<span class="vt">$350 alone</span></li>
           <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Contact form, tap-to-call &amp; Google Maps</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Analytics, SSL &amp; hosting setup</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Analytics, SSL &amp; hosting setup<span class="vt">$150 alone</span></li>
           <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>2 rounds of changes, then it's yours to keep</li>
         </ul>
+        <p class="stackline">Bought separately, the line items run about <b>$1,700</b>, before anyone designs a thing. Here it's <b>$1,500 flat</b>, build included.</p>
         <a class="btn btn-fill" href="#start" data-tier="The Website">Start your build <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <p style="margin-top:1rem;font-size:.8rem;color:var(--fg-faint);text-align:center">Or skip ahead. <a href="https://buy.stripe.com/fZu4gzdNk6O37YP3nPawo0g" style="color:var(--orange);font-weight:600">Pay the $750 deposit</a> and lock your slot now.</p>
       </div>
@@ -858,7 +899,7 @@ footer{border-top:1px solid var(--line);padding:46px 0 40px}
     </div>
 
     <!-- TRUST + PAYMENT BLOCK -->
-    <p class="rv" style="margin-top:22px;text-align:center;font-size:.85rem;color:var(--fg-faint);max-width:560px;margin-left:auto;margin-right:auto;line-height:1.7">50% locks your slot. You see the live preview before the rest is due. Not right? Deposit back. Stripe checkout: card, Apple Pay, Google Pay.<br>Domain registration not included. Extra revision rounds are $150 each.</p>
+    <p class="rv" style="margin-top:22px;text-align:center;font-size:.85rem;color:var(--fg-faint);max-width:580px;margin-left:auto;margin-right:auto;line-height:1.7"><b style="color:var(--fg)">The Preview Guarantee.</b> 50% locks your slot. You see the finished preview before the rest is due. Not right? Deposit back, no questions. Preview late? A month of Care &amp; Growth free, on me.<br>Stripe checkout: card, Apple Pay, Google Pay. Domain registration not included. Extra revision rounds are $150 each.</p>
   </div>
 </section>
 
@@ -1026,7 +1067,7 @@ footer{border-top:1px solid var(--line);padding:46px 0 40px}
         </div>
         <div class="qa">
           <button>What if I don't like the design? <span class="pm">+</span></button>
-          <div class="ans"><p>Every build comes with rounds of changes, and we keep refining until it's right. Want more passes? They're a flat $150 each. And if it's just not working out before launch, you get a full refund. You're never stuck with something you don't love.</p></div>
+          <div class="ans"><p>Every build comes with rounds of changes, and we keep refining until it's right. Want more passes? They're a flat $150 each. And the Preview Guarantee covers the rest: if it's just not working out before launch, your deposit comes back, no questions. You're never stuck with something you don't love.</p></div>
         </div>
         <div class="qa">
           <button>Do I own the site when it's finished? <span class="pm">+</span></button>
@@ -1034,7 +1075,7 @@ footer{border-top:1px solid var(--line);padding:46px 0 40px}
         </div>
         <div class="qa">
           <button>How fast will I actually get my site? <span class="pm">+</span></button>
-          <div class="ans"><p>A one-page Launch is ready in 48 hours. The Website runs about a week, and custom builds (online stores, portals) take up to two weeks. You get a clear timeline before any work starts, and the clock starts once your brief and content are in.</p></div>
+          <div class="ans"><p>A one-page Launch is ready in 48 hours. The Website runs about a week, and custom builds (online stores, portals) take up to two weeks. You get a clear timeline in writing before any work starts, and the clock starts once your brief and content are in. If your preview lands late, you get a month of Care &amp; Growth free.</p></div>
         </div>
         <div class="qa">
           <button>Is SEO really included, or is it an upsell? <span class="pm">+</span></button>
@@ -1067,13 +1108,13 @@ footer{border-top:1px solid var(--line);padding:46px 0 40px}
         <p>No call, no quote, no agency timeline. Send the two-minute brief and the research starts today.</p>
         <div class="guarline">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          <span><b>Full refund if the preview isn't right.</b> You risk a brief, not a build.</span>
+          <span><b>The Preview Guarantee.</b> See the finished site before the balance is due. Not right? Deposit back. Late? A month of Care &amp; Growth on me. You risk a brief, not a build.</span>
         </div>
         <div class="bacts">
           <a class="btn btn-fill" href="#start">Start your build <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           <a class="btn btn-dark" href="mailto:contact@odbaweb.com">Email instead</a>
         </div>
-        <span class="bslots"><span class="dl"></span>A few builds a month, so every site gets the research</span>
+        <span class="bslots"><span class="dl"></span><span id="slotClose">A few builds a month, so every site gets the research</span></span>
       </div>
       <div class="rv">
         <div class="tline">
@@ -1110,6 +1151,30 @@ footer{border-top:1px solid var(--line);padding:46px 0 40px}
 <div class="mcta"><a class="btn btn-fill" href="#start">Start your build · 2-min brief</a></div>
 
 <script>
+/* ============================================================
+   SLOTS_LEFT — EDIT THIS WEEKLY. Keep it true or delete it.
+   Set to a number (builds you can still take this month).
+   Set to 0 when the month is booked. Set to null to show
+   the generic line instead of a count.
+   ============================================================ */
+const SLOTS_LEFT = 2;
+(function(){
+  const pill=document.getElementById('slotPill'), close=document.getElementById('slotClose');
+  if(SLOTS_LEFT===null||SLOTS_LEFT===undefined)return;
+  const now=new Date(), month=now.toLocaleString('en-US',{month:'long'});
+  const next=new Date(now.getFullYear(),now.getMonth()+1,1).toLocaleString('en-US',{month:'long'});
+  let txt, ctx;
+  if(SLOTS_LEFT>0){
+    txt=SLOTS_LEFT+' build slot'+(SLOTS_LEFT===1?'':'s')+' left in '+month+'. Research starts the day you brief.';
+    ctx=SLOTS_LEFT+' build slot'+(SLOTS_LEFT===1?'':'s')+' left in '+month;
+  } else {
+    txt=month+' is booked. Briefs sent now hold a '+next+' slot.';
+    ctx=month+' is booked · next slot opens in '+next;
+  }
+  if(pill)pill.textContent=txt;
+  if(close)close.textContent=ctx;
+})();
+
 const hd=document.getElementById('hd');
 addEventListener('scroll',()=>hd.classList.toggle('stuck',scrollY>16),{passive:true});
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});
